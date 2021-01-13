@@ -1,0 +1,21 @@
+// a variable country can have any of the following names.
+
+// India
+// United States of America
+// China
+// Nepal
+// Australia
+// France
+// Germany
+// South Africa
+// Nigeria
+// Mexico
+// Argentina
+// Brazil
+// Canada
+// Singapore
+// Sweden
+// You should return the proper continent based on the input. Eg: If the country is India -> Asia
+// If the country is Argentina -> South America
+
+// Screenshot of the output for the countries Brazil and Mexico

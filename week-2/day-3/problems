@@ -1,0 +1,5 @@
+Create a company object with some keys print all the keys along with their values
+Given an array of items find the elements that occur more than once
+Create a user object with array of address objects print all the city names along with the pincodes of the addresses
+Create a square object with two methods to calculate the perimenter and area of the square
+Create a user object with a marks key having an array of subject marks, with a method to add a new subject marks and also methods to calculate the lowest, highest and total marks
