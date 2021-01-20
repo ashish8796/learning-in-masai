@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      .body-div {
+        margin: 0 auto;
+        background-color: black;
+      }
+
+      .main-div {
+        margin: 0 200px;
+        background-color: white;
+        height: 100vh;
+      }
+
+      .main-wrapper {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: auto;
+        background-color: white;
+        padding: 80px;
+      }
+
+      .float {
+        float: left;
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      .div-background-color {
+        background-color: black;
+        color: white;
+      }
+
+      .form {
+        width: 250px;
+        font-size: 25px;
+        margin-right: 200px;
+      }
+
+      .input {
+        font-size: 22px;
+        width: 250px;
+        height: 34px;
+        padding: 3px;
+        border-radius: 1px;
+        margin: 10px 0 40px 0;
+        border: 2px solid grey;
+      }
+
+      #last-input {
+        margin-bottom: 0;
+      }
+
+      .submit {
+        margin-top: 20px;
+        margin-bottom: 0;
+        border: none;
+        height: 50px;
+        font-size: 25px;
+        width: 260px;
+      }
+
+      .warning {
+        color: red;
+        margin: 10px 0;
+      }
+
+      .margin-top {
+        margin-top: 10px;
+        font-size: 25px;
+      }
+
+      .profile {
+        padding: 0 30px;
+        height: 448px;
+      }
+
+      .element {
+        font-size: 25px;
+        margin-top: 50px;
+        margin-bottom: 0;
+      }
+
+      #customer-name {
+        font-size: 50px;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body class="body-div">
+    <main class="main-div">
+      <div class="main-wrapper">
+        <form class="form float">
+          <label for="name" class="float">NAME</label>
+          <input type="text" name="name" id="name" class="float clear input" />
+
+          <label for="email" class="float clear">EMAIL</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="float clear input"
+          />
+
+          <label for="last-input" class="float clear">MOBILE</label>
+          <input
+            type="tel"
+            name="tel"
+            class="float clear input"
+            id="last-input"
+          />
+
+          <p class="warning float clear">Enter a valid mobile</p>
+
+          <button type="submit" class="float clear div-background-color submit">
+            REGISTER
+          </button>
+        </form>
+
+        <div class="profile float div-background-color">
+          <p class="element">NAME</p>
+          <p id="customer-name">MASAI</p>
+
+          <p class="element">EMAIL</p>
+          <p class="margin-top">email@masaischool.com</p>
+
+          <p class="element">MOBILE</p>
+          <p class="margin-top">9876543210</p>
+        </div>
+
+        <div class="clear"></div>
+      </div>
+
+      <div class="clear"></div>
+    </main>
+  </body>
+</html>

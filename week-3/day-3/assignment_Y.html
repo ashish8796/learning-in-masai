@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      body {
+        background: black;
+        margin-top: 0;
+      }
+
+      main {
+        width: 1000px;
+        margin: auto;
+        background-color: white;
+        padding: 50px;
+      }
+
+      .layout-1 {
+      }
+
+      .layout-1-child {
+        border-radius: 5px;
+        margin: auto;
+      }
+
+      .red {
+        width: 1000px;
+        height: 80px;
+        background-color: red;
+        margin-bottom: 50px;
+      }
+
+      .green {
+        width: 300px;
+        height: 500px;
+        background-color: green;
+        float: left;
+      }
+
+      .blue {
+        width: 650px;
+        height: 500px;
+        background-color: teal;
+        float: right;
+      }
+
+      .layout-2 {
+        padding: 50px 0;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background: teal;
+        border-radius: 5px;
+        margin: 20px 40px 20px 0;
+      }
+
+      .float {
+        float: left;
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      .name {
+        font-size: 28px;
+        color: blue;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .description {
+        margin-top: 10px;
+        font-size: 20px;
+      }
+
+      .layout-3 {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 30px 0;
+      }
+
+      .layout-3-child-1 {
+        width: 400px;
+        margin: auto;
+        background-color: wheat;
+        text-align: center;
+      }
+
+      #linus {
+        width: 150px;
+        margin: 30px 0 10px;
+      }
+
+      .layout-3-child-2 {
+        padding-top: 30px;
+      }
+
+      #khan {
+        margin: 0 30px 50px 180px;
+        width: 100px;
+      }
+
+      .block {
+        background-color: rgb(196, 92, 8);
+        margin: auto;
+        width: 900px;
+        height: 80px;
+        padding: 20px 30px;
+      }
+
+      .block-child-1 {
+        width: 400px;
+      }
+
+      .block-child-2 {
+        background-color: black;
+        width: 10px;
+        height: 85px;
+      }
+
+      .block-child-3 {
+        text-align: right;
+        width: 490px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="layout-1">
+        <div class="red layout-1-child clear"></div>
+        <div class="green layout-1-child"></div>
+        <div class="blue layout-1-child"></div>
+      </div>
+
+      <div class="layout-2 clear">
+        <div class="box float"></div>
+        <div class="box float clear"></div>
+        <div class="box float"></div>
+        <div class="box float clear"></div>
+        <div class="box float"></div>
+        <div class="box float"></div>
+        <div class="box float clear"></div>
+        <div class="box float"></div>
+        <div class="box float"></div>
+        <div class="box float"></div>
+      </div>
+
+      <div class="layout-3 clear">
+        <div class="layout-3-child-1">
+          <img
+            src="https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/linus.jpg"
+            alt="Linus Torvalds"
+            id="linus"
+          />
+          <p class="name">Linus Torvalds</p>
+          <p class="description">The creator of Linux & Git</p>
+        </div>
+
+        <div class="layout-3-child-2">
+          <img
+            src="https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/khan.jpg"
+            alt="khan"
+            id="khan"
+            class="float"
+          />
+          <p class="name" style="color: red">Sal Khan</p>
+          <p class="description">
+            Salman Khan is the founder of the khan Academy which has a mission
+            of providing a free world-class education for anyone, anywhere.
+          </p>
+        </div>
+
+        <div class="block clear">
+          <div class="block-child-1 float">
+            <p class="name" style="color: white">Ken Thompson</p>
+            <p style="width: 300px">
+              Designed and implemented the original Unix oertating system
+            </p>
+          </div>
+          <div class="block-child-2 float"></div>
+          <div class="block-child-3 float">
+            <p class="name" style="color: white">Dennis Ritchie</p>
+            <p>The creator of C programming Language</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

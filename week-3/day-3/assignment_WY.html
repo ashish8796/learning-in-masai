@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      main {
+        width: 950px;
+        margin: auto;
+      }
+
+      .rectangle-box {
+        width: 200px;
+        height: 500px;
+        background-color: teal;
+        border-radius: 5px;
+        margin: 55px 50px 55px 0;
+      }
+
+      #rect-4 {
+        margin-right: 0;
+      }
+
+      .square-box {
+        width: 200px;
+        height: 150px;
+        background-color: teal;
+        border-radius: 5px;
+        margin-top: 25px;
+      }
+
+      .rect-box-1 {
+        width: 460px;
+        height: 150px;
+        background-color: teal;
+        border-radius: 5px;
+        margin: 25px 40px;
+      }
+
+      #big-1 {
+        margin: 25px 0;
+        width: 500px;
+      }
+
+      #small-1 {
+        margin: 25px 20px;
+      }
+      #small-2 {
+        margin: 25px 0;
+      }
+      #samll-3 {
+        margin: 25px 40px;
+      }
+
+      #big-2 {
+        margin: 25px 0;
+      }
+
+      .float {
+        float: left;
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      .layout-3 {
+        padding-top: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      img {
+        padding: 10px;
+        border: 1px solid grey;
+        width: 270px;
+        border-radius: 5px;
+      }
+
+      #middle-img {
+        margin: 0 30px;
+      }
+
+      p {
+        font-size: 20px;
+        text-align: center;
+        line-height: 30px;
+      }
+
+      .img-container {
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="layout-1">
+        <div class="rectangle-box float"></div>
+        <div class="rectangle-box float"></div>
+        <div class="rectangle-box float"></div>
+        <div class="rectangle-box float" id="rect-4"></div>
+      </div>
+
+      <div class="layout-2 clear">
+        <div class="square-box float"></div>
+        <div class="rect-box-1 float"></div>
+        <div class="square-box float"></div>
+        <div class="rect-box-1 float clear" id="big-1"></div>
+        <div class="square-box float" id="small-1"></div>
+        <div class="square-box float" id="small-2"></div>
+        <div class="square-box float clear"></div>
+        <div class="square-box float" id="samll-3"></div>
+        <div class="rect-box-1 float" id="big-2"></div>
+      </div>
+
+      <div class="layout-3 clear">
+        <h1>Masai School Campus</h1>
+        <div>
+          <p>
+            Our main campus is centrally located in Koramangala, Heart of
+            Bangalore which is well connected to every part of the city.
+          </p>
+
+          <p>
+            Our Patna campus is located at Kankarbagh MainRoad. The reason for
+            choosing co-working sapce orver any other classroom is very simple -
+            there is no better place to learn coding than being in the
+            environment of 50+ tech teams of various companies.
+          </p>
+        </div>
+
+        <div>
+          <div class="float img-container">
+            <img
+              src="https://www.masaischool.com/static/campus/location_1/91springboard_min_1.jpg"
+              alt="Springboard"
+            />
+            <p>91springboard, Bangalore</p>
+          </div>
+          <div class="float img-container" id="middle-img">
+            <img
+              src="https://www.masaischool.com/static/campus/location_2/bhive_min_2.jpg"
+              alt="BHIVE"
+            />
+            <p>BHIVE, Bangalore</p>
+          </div>
+          <div class="float img-container">
+            <img
+              src="https://www.masaischool.com/static/campus/location_3/workstudio_min_2.jpg"
+              alt="Patna"
+            />
+            <p>Work Studio, Patna</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
