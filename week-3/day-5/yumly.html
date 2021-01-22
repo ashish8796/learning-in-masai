@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      body {
+        font-family: europa-regularregular, sans-serif;
+        margin: 0;
+      }
+
+      main {
+        width: 80vw;
+        margin: auto;
+        color: rgb(107, 105, 105);
+      }
+
+      .heading {
+        text-align: center;
+        font-size: 18px;
+        padding: 5px 0;
+        margin: 0;
+      }
+
+      .float-left {
+        float: left;
+      }
+
+      .float-right {
+        float: right;
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      .dinner-cont,
+      .popular-cont {
+        width: fit-content;
+        margin: auto;
+      }
+
+      .dinner-cont > div > div p,
+      .popular-cont > div > div p {
+        margin: 10px 0;
+        font-size: 14px;
+      }
+
+      .dinner-cont > div,
+      .popular-cont > div {
+        width: 15vw;
+      }
+      .dinner-cont > div > img,
+      .popular-cont > div > img {
+        width: 15vw;
+        height: 15vw;
+      }
+
+      .dinner-cont > div:nth-child(2),
+      .popular-cont > div:nth-child(2) {
+        margin: 0 10px;
+      }
+
+      .yum {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-image: url("https://x.yummlystatic.com/web/yum-white.png");
+        background-color: rgb(255, 94, 0);
+        background-size: cover;
+      }
+
+      .brand {
+        font-size: 10px;
+        font-weight: bold;
+        color: rgb(182, 179, 179);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>
+        <p class="heading">Weeknight Dinners</p>
+        <div class="dinner-cont">
+          <div class="float-left">
+            <img
+              src="https://images.unsplash.com/photo-1432139509613-5c4255815697?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjF8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60"
+              alt="Dish 1 image"
+            />
+            <div>
+              <div class="yum float-right clear"></div>
+              <p>Sheet Pan Honey Mustard Pork Chops</p>
+            </div>
+
+            <p class="brand">YUMLY</p>
+          </div>
+
+          <div class="float-left">
+            <img
+              src="https://media1.s-nbcnews.com/j/newscms/2019_30/2942096/wol_fried_rice_bcc2cc1a3f5e982540ea61abf80c4e4c.fit-560w.jpg"
+              alt="Dish 2 image"
+            />
+            <div>
+              <div class="yum float-right clear"></div>
+              <p>Apricot Mustard Galzed Ham</p>
+            </div>
+
+            <p class="brand">YUMLY</p>
+          </div>
+          <div class="float-left">
+            <img
+              src="https://media4.s-nbcnews.com/j/newscms/2019_30/2942131/fmc_orange_chicken_ec0e8f70119c800bedad167fbe239da5.fit-560w.jpg"
+              alt="Dish 3 imgage"
+            />
+            <div>
+              <div class="yum float-right clear"></div>
+              <p>Pork Milanese with Cacio e Pepe Spag...</p>
+            </div>
+
+            <p class="brand">PORK</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="heading clear">Popular Now</p>
+      <div class="popular-cont">
+        <div class="float-left">
+          <img
+            src="
+          https://media4.s-nbcnews.com/j/newscms/2019_30/2942136/gdl_asian_sesame_chicken_wings_f1c4b2e8e39286206910ebdbfa21bb3f.fit-560w.jpeg"
+            alt="Dish image 4"
+          />
+          <div>
+            <div class="yum float-right clear"></div>
+            <p>Brown Sugar Cookies</p>
+          </div>
+          <p class="brand">YUMLY</p>
+        </div>
+        <div class="float-left">
+          <img
+            src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/baked-chilli-jacket-potatoes-6e7b8d5.jpg?webp=true&quality=90&resize=500%2C454"
+            alt="Dish 5 image"
+          />
+
+          <div>
+            <div class="yum float-right clear"></div>
+            <p>Vegan Spinach Lasagna</p>
+          </div>
+          <p class="brand">YUMLY</p>
+        </div>
+        <div class="float-left">
+          <img
+            src="https://images.immediate.co.uk/production/volatile/sites/30/2013/05/easy-meatballs-798e118.jpg?webp=true&quality=90&resize=620%2C563"
+            alt="Dish 6 image"
+          />
+          <div>
+            <div class="yum float-right clear"></div>
+            <p>Easy Korean Sticky Chicken</p>
+          </div>
+          <p class="brand">YUMLY</p>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </main>
+  </body>
+</html>
