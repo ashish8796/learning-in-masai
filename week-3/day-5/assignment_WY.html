@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      body {
+        background-color: black;
+        margin: 0;
+      }
+
+      .clear {
+        clear: left;
+      }
+
+      .float {
+        float: left;
+      }
+
+      main {
+        width: 50vw;
+        margin: auto;
+        padding: 3.5% 80px 0;
+        background-color: white;
+      }
+
+      .layout-1 > div {
+        width: 20%;
+        height: 70vh;
+        background-color: teal;
+        margin-right: 6.6%;
+        border-radius: 5px;
+      }
+
+      .layout-1 > div:nth-child(4) {
+        margin-right: 0;
+      }
+
+      .layout-2 {
+        padding: 30px 0 0;
+        width: 100%;
+      }
+
+      .layout-2 > div {
+        height: 120px;
+        background-color: teal;
+        border-radius: 5px;
+        margin-bottom: 50px;
+      }
+
+      .layout-2-box {
+        width: 19%;
+      }
+
+      .layout-2-big-box {
+        width: 47%;
+      }
+
+      #layout-2-special {
+        width: 56%;
+      }
+
+      .margin {
+        margin: 0 50px;
+      }
+
+      .margin:nth-child(odd) {
+        margin: 0 20px;
+      }
+
+      .layout-3 {
+        text-align: center;
+      }
+
+      .layout-3 p {
+        line-height: 25px;
+        font-size: 18px;
+      }
+
+      .layout-3 img {
+        width: 185px;
+        padding: 10px;
+        border: 1px solid gray;
+      }
+
+      .layout-3 img:nth-child(1) {
+        margin: 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="layout-1">
+        <div class="float"></div>
+        <div class="float"></div>
+        <div class="float"></div>
+        <div class="float"></div>
+      </div>
+
+      <div class="layout-2 clear">
+        <div class="float layout-2-box"></div>
+        <div class="float layout-2-big-box margin"></div>
+        <div class="float layout-2-box"></div>
+        <div class="float layout-2-big-box clear" id="layout-2-special"></div>
+
+        <div class="float layout-2-box margin"></div>
+        <div class="float layout-2-box"></div>
+        <div class="float layout-2-box clear"></div>
+        <div class="float layout-2-box margin"></div>
+        <div class="float layout-2-big-box"></div>
+      </div>
+
+      <div class="layout-3 clear">
+        <div>
+          <h2>Masai School Campus</h2>
+          <p>
+            Our main campus is centrally loacated in Koramangala, Heart of
+            Bangalore which is well connected to every part of the city.
+          </p>
+          <p>
+            Our Patna campus is located at Kankarbagh Main Road. The reason for
+            choosing co-working space over any other classroom is very simple -
+            there is no better place to learn coding than being in environment
+            of 50+ tech teams of various companies.
+          </p>
+        </div>
+        <div>
+          <div class="float">
+            <img
+              src="https://www.masaischool.com/static/campus/location_1/91springboard_min_1.jpg"
+              alt="91springboard, Bangalore"
+            />
+            <p>91springboard, Bangalore</p>
+          </div>
+          <div class="float">
+            <img
+              src="https://www.masaischool.com/static/campus/location_2/bhive_min_2.jpg"
+              alt="BHIVE, Bangalore"
+            />
+            <p>BHIVE, Bangalore</p>
+          </div>
+          <div class="float">
+            <img
+              src="https://www.masaischool.com/static/campus/location_3/workstudio_min_2.jpg"
+              alt="Work Studio, Patna"
+            />
+            <p>Work Studio, Patna</p>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </main>
+  </body>
+</html>
