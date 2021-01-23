@@ -23,6 +23,4 @@ function createSong(urlArr) {
     songTag.setAttribute("controls", "true");
     songContainer.append(songTag);
   });
-  // let songStr =
-  // retrun`<audio src="${}"/>`;
 }
