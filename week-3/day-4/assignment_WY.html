@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      body {
+        background-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+
+      .main-wrapper {
+        width: 800px;
+        margin: auto;
+        background-color: white;
+        padding: 0 80px;
+        height: 100vh;
+      }
+
+      .main-wrapper div:first-child {
+        float: left;
+        margin-top: 100px;
+      }
+
+      label,
+      input,
+      p,
+      button {
+        float: left;
+        clear: both;
+      }
+
+      label {
+        font-size: 25px;
+        margin: 5px 0;
+      }
+
+      input,
+      button {
+        width: 300px;
+        font-size: 30px;
+        border-radius: 1px;
+        border: 2px solid darkgray;
+        margin-bottom: 35px;
+      }
+
+      form p {
+        margin-top: -20px;
+        color: red;
+        font-size: 20px;
+      }
+
+      form button {
+        background-color: black;
+        color: white;
+        padding: 5px 0;
+        border: none;
+        width: 308px;
+        margin-bottom: 0;
+      }
+
+      .registered {
+        float: right;
+        background-color: black;
+        color: white;
+        padding: 50px 50px 35px;
+        margin-top: 100px;
+      }
+
+      .registered p:nth-child(odd) {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .registered p:nth-child(even) {
+        font-size: 20px;
+        margin: 10px 0 40px;
+        padding: 0;
+      }
+
+      .registered p:nth-child(2) {
+        font-size: 50px;
+      }
+
+      .main-wrapper div:last-child {
+        clear: both;
+      }
+
+      .eat-fit-wrapper {
+        background-color: white;
+        width: 600px;
+        margin: 50px auto;
+        height: 80vh;
+        padding: 50px 0;
+        text-align: center;
+        background-color: #322f30;
+      }
+
+      h1 {
+        color: white;
+        font-size: 25px;
+      }
+
+      h2 {
+        color: #f84c66;
+        margin: 0 0 20px;
+      }
+
+      h3 {
+        color: white;
+        margin: 40px 0 0;
+      }
+
+      h4 {
+        width: 60px;
+        border: 2px solid white;
+        border-radius: 5px;
+        margin: 0 auto 40px;
+      }
+
+      #sign-up {
+        margin: 30px auto 0;
+        background-color: #f84d6b;
+        color: white;
+        width: 500px;
+        float: none;
+        border: none;
+        border-radius: 25px;
+        padding: 13px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main-wrapper">
+      <div>
+        <form>
+          <label for="name">NAME</label>
+          <input type="text" id="name" />
+
+          <label for="email">EMAIL</label>
+          <input type="email" id="email" />
+
+          <label for="mobile">MOBILE</label>
+          <input type="tel" id="mobile" />
+
+          <p>Enter a valid moble</p>
+
+          <button type="submit">REGISTER</button>
+        </form>
+      </div>
+      <div class="registered">
+        <p>NAME</p>
+        <p>MASAI</p>
+
+        <p>EMAIL</p>
+        <p>email@masaischool.com</p>
+
+        <p>MOBILE</p>
+        <p>9876543210</p>
+      </div>
+
+      <div></div>
+    </main>
+
+    <main class="eat-fit-wrapper">
+      <h1>
+        Today Sun, 26<sup>th</sup> Apr<br />
+        Schedule -7:00 AM onwards
+      </h1>
+
+      <h3>Parathe Sharathe with</h3>
+      <h2>Chef Archana Doshi</h2>
+      <h4></h4>
+
+      <h3>Spices and Immunity with</h3>
+      <h2>Nutrition Expert Manasa Rajan</h2>
+      <h4></h4>
+
+      <h3>Postman Vegetables with</h3>
+      <h2>Chef Jason D'Souza</h2>
+
+      <button type="submit" id="sign-up">SIGN UP NOW</button>
+    </main>
+  </body>
+</html>

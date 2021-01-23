@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .body-tag {
+        background-color: #23282e;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .float-left {
+        float: left;
+      }
+
+      .float-right {
+        float: right;
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      .main-wrapper {
+        text-align: center;
+        color: white;
+        width: 1000px;
+        margin: 165px auto;
+        padding-left: 100px;
+      }
+
+      .intro {
+        width: 700px;
+        font-size: 26px;
+        margin: auto;
+        line-height: 40px;
+      }
+
+      .inline {
+        margin: 0;
+        padding: 0;
+      }
+
+      .dash {
+        width: 25px;
+        border: 1px solid white;
+        margin: 20px 10px;
+      }
+
+      .sing-up-form {
+        margin: 45px 0;
+      }
+
+      .lable {
+        font-size: 10px;
+        margin: 10px 0;
+      }
+
+      .input,
+      #submit {
+        padding: 9px 13px;
+        border-radius: 4px;
+        margin-right: 25px;
+        outline: none;
+        border: none;
+      }
+
+      #submit {
+        margin-top: 25px;
+        width: 220px;
+        height: 40px;
+        font-size: 14px;
+        background-color: #53d057;
+        color: white;
+      }
+
+      .instruction {
+        padding-top: 50px;
+        font-size: 12px;
+        color: #404448;
+      }
+
+      #terms,
+      #privacy {
+        color: rgb(218, 218, 218);
+      }
+    </style>
+  </head>
+  <body class="body-tag">
+    <main class="main-wrapper">
+      <div class="intro">
+        <div>
+          <p class="float-left inline">Get started for free</p>
+          <div class="dash float-left inline"></div>
+          <p class="float-right inline">
+            join the millions of developers already
+          </p>
+        </div>
+        <p class="clear">
+          using Github to share their code, word together, and build amazing
+          things.
+        </p>
+      </div>
+
+      <form class="sing-up-form clear">
+        <div class="float-left">
+          <label for="username" class="float-left lable"> Username </label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Pick a username"
+            class="clear float-left input"
+          />
+        </div>
+
+        <div class="float-left">
+          <label for="email" class="float-left lable">Email</label>
+          <input
+            class="clear float-left input"
+            type="email"
+            id="email"
+            placeholder="Your email address"
+          />
+        </div>
+
+        <div class="float-left">
+          <label for="password" class="float-left lable">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Create a password"
+            class="clear float-left input"
+          />
+        </div>
+
+        <button type="submit" class="float-left" id="submit">
+          Sign up for Github
+        </button>
+      </form>
+
+      <p class="clear instruction">
+        By clicking "Sign up for Github", you agree to our
+        <span id="terms">terms of service</span> and
+        <span id="privacy">privacy statement</span>. We'll occasionally send you
+        account realted emails.
+      </p>
+    </main>
+  </body>
+</html>

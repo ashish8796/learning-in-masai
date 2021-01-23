@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      .body-div {
+        background-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+
+      .float-left {
+        float: left;
+      }
+
+      .float-right {
+        float: right;
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      .main-wrapper {
+        width: 735px;
+        margin: auto;
+        background-color: white;
+        padding: 0 90px;
+      }
+
+      .working-div {
+        text-align: center;
+        padding: 20px 0;
+        margin: 0 100px;
+        line-height: 25px;
+      }
+
+      .main-wrapper > div > div {
+        width: 350px;
+        line-height: 25px;
+      }
+
+      .main-wrapper > div > div:nth-child(2) hr {
+        margin-top: 65px;
+      }
+    </style>
+  </head>
+  <body class="body-div">
+    <main class="main-wrapper">
+      <div class="working-div">
+        <h2>Working and thriving</h2>
+
+        <p>
+          We want people to thrive at Slack; we believe you do your best work
+          when you feel your best. Here are a just a few benefits we're proud to
+          provideour team with.
+        </p>
+      </div>
+
+      <div>
+        <div class="learning-div float-left">
+          <h3>Learning & development</h3>
+
+          <p>
+            Receive an anjual allowance for professional development, plus a
+            monthly bonus you can use towards anything. That means anythig: a
+            gym membership, your pet sitter, a new work look. Whatever matters
+            most to you.
+          </p>
+
+          <hr />
+        </div>
+
+        <div class="health-div float-right">
+          <h3>Health & wellness</h3>
+
+          <p>
+            Free medical, dental care and eye care for you and your family -
+            Slack pays 100% of your premiums.
+          </p>
+
+          <hr />
+        </div>
+
+        <div class="leave-div float-left clear">
+          <h3>Parental leave</h3>
+
+          <p>
+            A lot of us families, of all sorts of shapes and sizes, and we
+            welcome each new addition with generous parental leave and "bonding
+            leave".
+          </p>
+        </div>
+
+        <div class="holiday-div float-right">
+          <h3>Happier weekdays</h3>
+
+          <p>
+            A culture light on meetings (or that's our aim, at least) with guest
+            speakers and opportunites to get to know your team better thourgh
+            events like weekly catered lunches and breakfasts, Thursday Socials
+            and game nights. But we don't stay in the office 24/7.
+          </p>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </main>
+  </body>
+</html>

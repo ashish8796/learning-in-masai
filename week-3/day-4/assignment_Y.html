@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      body {
+        background-color: black;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .float {
+        float: left;
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      .main-cont {
+        background-color: white;
+        margin: auto;
+        height: 100vh;
+        width: 800px;
+      }
+
+      .main-cont > div {
+        margin: 0 auto;
+        padding: 20px 20px 20px 50px;
+        width: fit-content;
+      }
+
+      .logo {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        margin-top: 8px;
+        border-radius: 25px;
+      }
+
+      .box {
+        border-radius: 5px;
+        padding: 5px 30px;
+
+        color: white;
+      }
+
+      .box:first-child {
+        background-color: #f1c439;
+      }
+
+      .box:nth-child(2) {
+        background-color: #3867d8;
+        margin: 0 30px;
+      }
+
+      .box:last-child {
+        background-color: #20c4dc;
+      }
+
+      .big-img {
+        width: 200px;
+        border-radius: 4px;
+      }
+
+      .big-img:nth-child(2) {
+        margin: 0 30px;
+      }
+
+      .box p {
+        float: left;
+      }
+
+      h1 {
+        color: #1f3b63;
+        text-align: center;
+        margin: 0;
+        padding: 10px 0 20px;
+      }
+
+      h1 + div p {
+        padding: 5px 10px;
+        font-size: 14px;
+        margin-top: 0;
+        margin-right: 25px;
+        border-radius: 2px;
+        color: #1f3b63;
+        text-align: center;
+      }
+
+      h1 + div p:hover {
+        background-color: #2cd7e7;
+        color: white;
+      }
+
+      .main-cont > div:last-child {
+        width: fit-content;
+        padding-left: 110px;
+      }
+
+      .apply-box {
+        width: 210px;
+        color: #1f3b63;
+      }
+
+      .apply-box:nth-child(2) {
+        margin: 0 20px;
+      }
+
+      .apply-box > p:first-child {
+        font-size: 12px;
+      }
+
+      .apply-box > h3 + p {
+        font-size: 12px;
+      }
+
+      .apply-box button {
+        border: 1px solid #20c4dc;
+        color: #20c4dc;
+        padding: 8px 30px;
+        outline: none;
+        font-size: 14px;
+        border-radius: 2px;
+        background: none;
+      }
+
+      .apply-box > h3 {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main-cont">
+      <div>
+        <div class="float box">
+          <img
+            src="https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/icon_circle.png"
+            alt="logo 1"
+            class="logo float"
+          />
+          <p>
+            Scholarship <br />
+            Available
+          </p>
+        </div>
+
+        <div class="float box">
+          <img
+            src="https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/icon_circle.png"
+            alt="logo 2"
+            class="logo float"
+          />
+          <p>
+            Scholarship <br />
+            Available
+          </p>
+        </div>
+
+        <div class="float box">
+          <img
+            src="https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/icon_circle.png"
+            alt="logo 3"
+            class="logo float"
+          />
+
+          <p>
+            Scholarship <br />
+            Available
+          </p>
+        </div>
+      </div>
+
+      <div class="clear">
+        <h1>Popular Program</h1>
+
+        <div>
+          <p class="float">Graduate</p>
+          <p class="float">Postgraduate</p>
+          <p class="float">PHD Scholarships</p>
+          <p class="float">Training</p>
+        </div>
+      </div>
+
+      <div class="clear">
+        <img
+          src="https://www.masaischool.com/static/campus/location_1/91springboard_min_1.jpg"
+          alt="img 1"
+          class="big-img float"
+        />
+
+        <img
+          src="https://www.masaischool.com/static/campus/location_1/91springboard_min_1.jpg"
+          alt="img 2"
+          class="big-img float"
+        />
+
+        <img
+          src="https://www.masaischool.com/static/campus/location_1/91springboard_min_1.jpg"
+          alt="img 3"
+          class="big-img float"
+        />
+      </div>
+
+      <div class="clear">
+        <div class="float apply-box">
+          <p>Agriculture</p>
+
+          <h3>Chemical engineering</h3>
+          <p>
+            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used.
+          </p>
+
+          <button>Apply Now</button>
+        </div>
+
+        <div class="float apply-box">
+          <p>Agriculture</p>
+          <h3>Mechanical engineering</h3>
+          <p>
+            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used.
+          </p>
+
+          <button>Apply Now</button>
+        </div>
+
+        <div class="float apply-box">
+          <p>Agriculture</p>
+          <h3>Bio engineering</h3>
+          <p>
+            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used.
+          </p>
+
+          <button>Apply Now</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

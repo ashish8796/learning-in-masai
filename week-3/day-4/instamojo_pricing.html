@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      body {
+        background-color: #352552;
+        margin: 0;
+      }
+
+      .main-wrapper {
+        width: 1000px;
+        background-color: white;
+        margin: auto;
+        padding: 0 80px;
+        height: 100vh;
+      }
+
+      .main-wrapper > div:last-child {
+        clear: both;
+      }
+
+      .heading {
+        color: #352552;
+        font-size: 28px;
+        margin: 0;
+        padding: 20px 0 0;
+        text-align: center;
+      }
+
+      .line {
+        width: 100px;
+        border: 1px solid #352552;
+        border-radius: 2px;
+        margin: 25px auto;
+      }
+
+      .hidden-cost-div {
+        clear: both;
+      }
+
+      .compare-price-div > p,
+      .hidden-cost-div > p {
+        color: #352552;
+        text-align: center;
+      }
+
+      .compare-price-div > div > div,
+      .hidden-cost-div > div > div {
+        float: left;
+        margin-right: 90px;
+        color: rgb(4, 4, 63);
+      }
+
+      #gateways-1,
+      #gateways-2 {
+        margin-right: 0;
+      }
+
+      .compare-price-div > div > div > p:first-child,
+      .hidden-cost-div > div > div > p:first-child {
+        color: gray;
+        font-weight: bold;
+      }
+
+      .compare-price-div > div > div > p:first-child,
+      .hidden-cost-div > div > div > p:first-child {
+        color: gray;
+        font-weight: bold;
+      }
+
+      .compare-price-div > div > div:nth-child(2),
+      .hidden-cost-div > div > div:nth-child(2) {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main-wrapper">
+      <div class="compare-price-div">
+        <h2 class="heading">Compare Pricing</h2>
+        <div class="line"></div>
+
+        <p>
+          Instamojo's overall costs compared to other modern platforms &
+          traditional gateways.
+        </p>
+
+        <div>
+          <div>
+            <p>FEES & OTHER CHARGES</p>
+            <p>Setup Fee</p>
+            <p>Annual Maintenance</p>
+            <p>Minimum Commitment</p>
+          </div>
+
+          <div>
+            <p>
+              <img
+                src="https://www.masaischool.com/static/img/logo.svg"
+                alt="Masai school"
+              />
+            </p>
+            <p>Free</p>
+            <p>Free</p>
+            <p>No Commitment</p>
+          </div>
+
+          <div>
+            <p>MODERN PLATFORMS</p>
+            <p>&#8377;0 to &#8377;10,000 / year</p>
+            <p>&#8377;10,000 to &#8377;25,000 / year</p>
+            <p>Varies</p>
+          </div>
+
+          <div class="margin-right" id="gateways-1">
+            <p>TRADITIONAL GATEWAYS</p>
+            <p>&#8377;25,000 / year</p>
+            <p>&#8377;10,000 to &#8377;25,000 / year</p>
+            <p>Upto &#8377;100,000 / month</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden-cost-div">
+        <h2 class="heading">No Hidden Costs</h2>
+        <div class="line"></div>
+
+        <p>
+          Cost of time and effort spent increases hidden costs. But not on
+          instamojo.
+        </p>
+
+        <div>
+          <div>
+            <p>COSTS</p>
+            <p>Time to Get Started</p>
+            <p>Developer Costs for Integration</p>
+            <p>Legal Costs of Agreements</p>
+          </div>
+
+          <div>
+            <p>
+              <img
+                src="https://www.masaischool.com/static/img/logo.svg"
+                alt="Masai school"
+              />
+            </p>
+            <p>3-5 minutes</p>
+            <p>Not Needed</p>
+            <p>Not Needed</p>
+          </div>
+
+          <div>
+            <p>MODERN PLATFORMS</p>
+            <p>1-4 weeks</p>
+            <p>&#8377;1 Lakh+</p>
+            <p>Varies</p>
+          </div>
+
+          <div class="margin-right" id="gateways-1">
+            <p>TRADITIONAL GATEWAYS</p>
+            <p>4-8 weeks</p>
+            <p>&#8377;1 Lakh+</p>
+            <p>&#8377;1 Lakh+</p>
+          </div>
+        </div>
+      </div>
+
+      <div></div>
+    </main>
+  </body>
+</html>

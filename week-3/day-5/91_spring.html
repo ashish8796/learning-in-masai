@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+      }
+
+      main {
+        width: 42%;
+        margin: auto;
+        text-align: center;
+        background-color: #038488;
+        height: 100vh;
+        padding: 0 30px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .float-left {
+        float: left;
+      }
+
+      .clear {
+        clear: left;
+      }
+
+      div {
+        width: 38%;
+        height: 30vh;
+        padding: 0 10px;
+        margin: 10px 0;
+        color: white;
+        background-image: url(https://image.freepik.com/free-vector/man-shows-gesture-great-idea_10045-637.jpg);
+        background-size: cover;
+        background-blend-mode: soft-light;
+      }
+
+      div:nth-child(odd) {
+        float: left;
+      }
+
+      div:nth-child(even) {
+        float: right;
+      }
+
+      div > h3 + p {
+        font-size: 14px;
+      }
+
+      div:first-child {
+        background-color: #ff4a4d;
+      }
+
+      div:nth-child(2) {
+        background-color: #26e022;
+      }
+
+      div:nth-child(3) {
+        background-color: #ed3f3c;
+      }
+
+      div:nth-child(4) {
+        background-color: #0574ff;
+      }
+
+      div:nth-child(5) {
+        background-color: #f75a94;
+      }
+
+      div:last-child {
+        background-color: #07ff93;
+      }
+
+      div:nth-child(4) h3 {
+        margin-bottom: 0;
+      }
+
+      div:nth-child(4) h3 + p {
+        margin-top: 0;
+      }
+
+      h3 {
+        margin: 14px 0 18px;
+        font-size: 25px;
+      }
+
+      .button {
+        padding: 5px 20px;
+        border: 1px solid white;
+        border-radius: 3px;
+        width: 140px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="">
+        <h3>KEEPING CLAM</h3>
+        <p>
+          In times like these,<br />
+          it's impossible to not panic. <br />
+          Here's a little something to put your mind at ease.
+        </p>
+        <p class="button">DISCOVER NOW</p>
+      </div>
+
+      <div class="">
+        <h3>COVID-19 FACTS</h3>
+        <p>
+          The spread of fake news and misinformation is a virus<br />
+          in itself. Only verified and <br />
+          credible sources here.
+        </p>
+        <p class="button">DISCOVER NOW</p>
+      </div>
+
+      <div class="clear">
+        <h3>PRODUCTIVITY</h3>
+        <p>
+          While we're all practicing self-isolation and social distancing,
+          feeling productive and useful is a challenge. Find all you need to
+          feel productive.
+        </p>
+        <p class="button">DISCOVER NOW</p>
+      </div>
+
+      <div class="">
+        <h3>BUSINESS ONLINE</h3>
+        <p>
+          The world has come to a standstill, doesn't mean work has to. Discover
+          ways to conduct your business online.
+        </p>
+        <p class="button">DISCOVER NOW</p>
+      </div>
+
+      <div class="clear">
+        <h3>SOCIAL</h3>
+        <p>
+          It's no secret that we're social creatures. In times of social
+          distance and self-isolation, discover ways to keep the social
+          interactions going.
+        </p>
+        <p class="button">DISCOVER NOW</p>
+      </div>
+
+      <div class="">
+        <h3>HEALTH</h3>
+        <p>
+          It's no secret that we're social creatures. In times of social
+          distance and self-isolation, discover ways to keep the social
+          interactions going.
+        </p>
+        <p class="button">DISCOVER NOW</p>
+      </div>
+    </main>
+  </body>
+</html>
