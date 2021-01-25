@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      .main-wrapper {
+        width: 70%;
+        height: 97vh;
+        margin: auto;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .main-wrapper > h1 {
+        color: #1c1634;
+        margin: 0;
+        font-size: 40px;
+        text-align: center;
+        padding-top: 10px;
+      }
+
+      .main-wrapper > div {
+        margin-left: 50px;
+      }
+
+      .main-wrapper > div > div {
+        float: left;
+        margin-right: 40px;
+        padding: 8vh 0 0;
+      }
+
+      .main-wrapper img {
+        width: 18vw;
+        height: 11vw;
+      }
+
+      .main-wrapper img + {
+        color: red;
+      }
+
+      .task {
+        color: red;
+        font-size: 12px;
+      }
+
+      .task ~ p {
+        color: gray;
+        font-size: 14px;
+        margin: 5px 0;
+      }
+
+      .task + p {
+        color: #09285c;
+        margin: 20px auto 0;
+      }
+
+      .main-wrapper > div:last-child {
+        clear: both;
+        height: 30%;
+        background-color: #09285c;
+        margin: 40% 0 0;
+        color: white;
+        padding: 0 30px 0 80px;
+      }
+
+      .main-wrapper > div:last-child > div:first-child {
+        float: left;
+        width: 25%;
+        padding-top: 5%;
+        padding-bottom: 3px;
+      }
+
+      .main-wrapper > div:last-child > div:first-child > h2 {
+        margin: 0;
+      }
+
+      .main-wrapper > div:last-child > div:first-child > p {
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+      #fill {
+        float: right;
+        width: 53%;
+
+        padding: 3% 0 0;
+      }
+
+      #fill > div:first-child > p {
+        border: 1px solid #365076;
+        padding: 5px;
+        width: 45%;
+        float: left;
+        border-radius: 2px;
+      }
+
+      #fill p:first-child {
+        margin-right: 18px;
+      }
+
+      #fill > div:last-child {
+        clear: both;
+      }
+
+      #fill > div:last-child > div {
+        float: left;
+        border: 1px solid #365076;
+        width: 60%;
+        border-radius: 3px;
+        padding: 5px 10px;
+        color: #365076;
+      }
+
+      #fill > div:last-child > div p {
+        float: left;
+        margin: 0;
+      }
+      #fill > div:last-child > div select {
+        float: right;
+        background-color: #09285c;
+        border: none;
+        color: #365076;
+      }
+
+      #fill button {
+        width: 28%;
+        padding: 10px 0;
+        background-color: #f9495a;
+        color: white;
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        font-size: 12px;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main-wrapper">
+      <h1>Our Recent News</h1>
+      <div>
+        <div>
+          <img src="https://via.placeholder.com/300x250" alt="img-1" />
+          <p class="task">Business planing</p>
+          <p>Amazing Places To Visit In Summer</p>
+          <p>Nov 30 2020</p>
+        </div>
+
+        <div>
+          <div>
+            <img src="https://via.placeholder.com/300x250" alt="img-2" />
+            <p class="task">Audit</p>
+            <p>Amazing Places To Visit In Summer</p>
+            <p>Nov 30 2020</p>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <img src="https://via.placeholder.com/300x250" alt="img-3" />
+            <p class="task">Business planing</p>
+            <p>Amazing Places To Visit In Summer</p>
+            <p>Nov 30 2020</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <h2>Request for Call Back</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div id="fill">
+          <div>
+            <p>Name</p>
+            <p>Phone</p>
+          </div>
+          <div>
+            <div>
+              <p>Service</p>
+              <select id=""></select>
+            </div>
+            <button>Send</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
