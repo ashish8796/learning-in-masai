@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      main {
+        width: 62vw;
+        margin: auto;
+      }
+
+      h3 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: normal;
+      }
+
+      .float-left {
+        float: left;
+      }
+
+      .clear-both {
+        clear: both;
+      }
+
+      .first-block > div {
+        float: left;
+      }
+
+      .clm-1 > div {
+        background-color: #889f2c;
+      }
+
+      .clm-1 p {
+        margin: 6px 0;
+        font-size: 22px;
+      }
+
+      .clm-1 > div:first-child {
+        background-color: #a92b28;
+        color: white;
+        text-align: center;
+      }
+
+      .clm-2 > div {
+        background-color: #f95353;
+        text-align: center;
+      }
+
+      .clm-2 > div:first-child {
+        background-color: white;
+        border: 1px solid white;
+      }
+
+      .clm-2 p {
+        margin-top: 9px;
+      }
+
+      .clm-3 > div {
+        border: 1px solid white !important;
+      }
+
+      .clm-3 > div:nth-child(6),
+      .clm-3 > div:last-child {
+        border: 3px solid !important;
+        width: 31px;
+        height: 31px;
+      }
+
+      .symbol {
+        background-color: #889f2c;
+        width: 120px;
+        border: 2px solid;
+      }
+
+      .symbol > p:first-child {
+        text-align: right;
+        margin: 0;
+        padding: 10px;
+      }
+
+      .symbol > p:nth-child(2) {
+        font-size: 45px;
+        margin: 0 10px;
+        padding: 0;
+      }
+
+      .symbol > p:last-child {
+        margin: 0 10px 10px;
+      }
+
+      .second-block {
+        margin-top: 20px;
+      }
+
+      .second-block > div {
+        float: left;
+      }
+
+      .third-block > div {
+        float: left;
+      }
+      .clm-13 > div,
+      .clm-14 > div:nth-child(5),
+      .clm-14 > div:nth-child(6),
+      .clm-15 > div:nth-child(6) {
+        background-color: #fb693f;
+      }
+
+      .clm-13 > div:first-child,
+      .clm-14 > div:first-child,
+      .clm-15 > div:first-child,
+      .clm-16 > div:first-child,
+      .clm-17 > div:first-child {
+        background-color: white;
+        border: 1px solid white;
+      }
+
+      .clm-13 > div:nth-child(2) {
+        background-color: #ac4987;
+      }
+
+      .clm-13 > div:last-child,
+      .clm-14 > div:last-child,
+      .clm-15 > div:last-child,
+      .clm-16 > div:last-child,
+      .clm-17 > div:last-child,
+      .clm-18 > div:last-child {
+        background-color: #6d535e;
+      }
+
+      .clm-14 > div:nth-child(2),
+      .clm-15 > div:nth-child(2),
+      .clm-15 > div:nth-child(3),
+      .clm-16 > div:nth-child(2),
+      .clm-16 > div:nth-child(3),
+      .clm-16 > div:nth-child(4) {
+        background-color: #5aa02c;
+      }
+
+      .clm-14 > div:nth-child(3),
+      .clm-14 > div:nth-child(4),
+      .clm-15 > div:nth-child(4),
+      .clm-15 > div:nth-child(5),
+      .clm-16 > div:nth-child(5),
+      .clm-16 > div:nth-child(6) {
+        background-color: #ac4987;
+      }
+
+      .clm-17 > div {
+        background-color: #f84b64;
+      }
+
+      .clm-18 > div {
+        background-color: yellow;
+      }
+
+      .first-block > div > div,
+      .second-block > div > div,
+      .third-block > div > div {
+        width: 35px;
+        height: 35px;
+        margin: 10px 5px;
+        border: 1px solid;
+      }
+
+      .border {
+        border: 2px solid !important;
+      }
+
+      .second-block > div > div {
+        background-color: #3178fa;
+      }
+
+      .row-8 > div {
+        background-color: #46572e;
+        border-top: 1px solid #7a7354;
+      }
+
+      .row-8 > div:first-child,
+      .row-9 > div:first-child {
+        border-left: 1px solid;
+      }
+
+      .row-8 p {
+        color: white;
+        padding: 0 10px;
+        margin: 15px 0;
+      }
+
+      .row-9 > div {
+        background-color: #94bc5f;
+      }
+
+      .row-9 > div:nth-child(7) p {
+        margin: 6px 0 0 8px;
+      }
+
+      .row-9 > div:last-child p {
+        text-align: right;
+        padding: 0 3px;
+      }
+
+      .fourth-block {
+        margin: auto;
+        width: fit-content;
+        padding: 40px 0;
+      }
+
+      .fourth-block > div > div {
+        width: 35px;
+        height: 35px;
+        border-bottom: 1px solid;
+        border-right: 1px solid #7a7354;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h3>THE PERIODIC TABLE OF ELEMENTS</h3>
+      <div>
+        <div class="first-block">
+          <div class="clm-1">
+            <div><p>H</p></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <div class="clm-2 clear">
+            <div></div>
+            <div><p>4</p></div>
+            <div><p>12</p></div>
+            <div><p>20</p></div>
+            <div><p>38</p></div>
+            <div><p>56</p></div>
+            <div><p>88</p></div>
+          </div>
+          <div class="clm-3 clear">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="border"></div>
+            <div class="border"></div>
+          </div>
+        </div>
+        <div class="float-left">
+          <div>
+            <div class="symbol">
+              <p>14</p>
+              <p>Si</p>
+              <p>Silicon</p>
+            </div>
+          </div>
+          <div class="second-block">
+            <div class="clm-4">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+
+            <div class="clm-5">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+
+            <div class="clm-6">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+
+            <div class="clm-7">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+
+            <div class="clm-8">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+
+            <div class="clm-9">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+
+            <div class="clm-10">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+
+            <div class="clm-11">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+
+            <div class="clm-12">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="third-block float-left">
+          <div class="clm-13">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <div class="clm-14">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <div class="clm-15">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <div class="clm-16">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <div class="clm-17">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <div class="clm-18">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fourth-block clear-both">
+        <div class="row-8">
+          <div><p>La</p></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="row-9 clear-both">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div><p>Am</p></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div><p>No</p></div>
+        </div>
+      </div>
+
+      <div class="clear-both"></div>
+    </main>
+  </body>
+</html>
