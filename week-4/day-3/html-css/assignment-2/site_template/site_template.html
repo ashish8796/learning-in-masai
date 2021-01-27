@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      main {
+        width: 70vw;
+        margin: 50px auto 0;
+        display: grid;
+        grid-template:
+          "top top top"
+          "left right right";
+        gap: 30px;
+      }
+
+      main > div:first-child {
+        height: 80px;
+        background-color: red;
+        grid-area: top;
+        border-radius: 3px;
+      }
+
+      main > div:nth-child(2) {
+        height: 70vh;
+        background-color: rgb(6, 230, 6);
+        grid-area: left;
+        border-radius: 3px;
+      }
+
+      main > div:last-child {
+        height: 70vh;
+        background-color: teal;
+        grid-area: right;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div></div>
+      <div></div>
+      <div></div>
+    </main>
+  </body>
+</html>

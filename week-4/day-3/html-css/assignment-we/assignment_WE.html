@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      .flex {
+        display: flex;
+        margin: auto;
+        width: 65vw;
+      }
+
+      .flex > div {
+        height: 150px;
+        background-color: teal;
+        flex-basis: 150px;
+        border-radius: 3px;
+        margin: 20px;
+      }
+
+      #top > div:nth-child(2),
+      #middle > div:first-child,
+      #bottom > div:last-child {
+        flex-basis: 500px;
+      }
+
+      #middle > div:first-child {
+        flex-basis: 530px;
+      }
+
+      #middle > div:nth-child(2) {
+        margin: 20px 5px;
+      }
+
+      .grid {
+        display: grid;
+        margin: auto;
+        width: 65vw;
+        margin-top: 50px;
+        gap: 25px;
+        grid-template-columns: 130px 130px 130px 130px;
+        grid-template-rows: 130px 130px 130px 130px;
+      }
+
+      .grid > div {
+        background-color: teal;
+        border-radius: 3px;
+      }
+
+      .grid > div:nth-child(8) {
+        grid-row-start: 3;
+        grid-column-start: 1;
+      }
+
+      .grid > div:nth-child(9) {
+        grid-row-start: 3;
+        grid-column-start: 2;
+      }
+
+      .grid > div:last-child {
+        grid-row-start: 4;
+        grid-column-start: 1;
+      }
+
+      .grid-template {
+        width: 65vw;
+        margin: 50px auto;
+        display: grid;
+        gap: 50px;
+        grid-template:
+          "nav nav"
+          "left right";
+      }
+
+      .grid-template > div {
+        border-radius: 3px;
+      }
+
+      #nav {
+        height: 75px;
+        background-color: yellow;
+        grid-area: nav;
+      }
+
+      #left {
+        height: 400px;
+        background-color: red;
+        grid-area: left;
+      }
+
+      #right {
+        height: 400px;
+        background-color: #04f004;
+        grid-area: right;
+      }
+
+      @media (max-width: 600px) {
+        .grid-template {
+          grid-template:
+            "nav"
+            "right"
+            "left";
+        }
+
+        #left,
+        #right {
+          height: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>
+        <div id="top" class="flex">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="flex" id="middle">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="flex" id="bottom">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div class="layout-3 grid-template">
+        <div id="nav"></div>
+        <div id="left"></div>
+        <div id="right"></div>
+      </div>
+    </main>
+  </body>
+</html>

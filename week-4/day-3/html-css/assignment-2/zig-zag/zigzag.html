@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      main {
+        width: 70vw;
+        margin: auto;
+      }
+
+      main > div {
+        display: flex;
+      }
+
+      main > div > div {
+        background-color: teal;
+        height: 11vw;
+        width: 11vw;
+        margin: 1vw;
+        border-radius: 3px;
+      }
+
+      main > div:first-child > div:nth-child(2),
+      main > div:nth-child(2) > div:first-child,
+      main > div:last-child > div:last-child {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </main>
+  </body>
+</html>

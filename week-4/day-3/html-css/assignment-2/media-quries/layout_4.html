@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      main {
+        width: 80vw;
+        margin: 50px auto 30px;
+        display: grid;
+        grid-template-rows: 80px 19vw;
+        grid-template-columns: 19vw 19vw 19vw 19vw;
+        gap: 40px;
+        font-size: 30px;
+      }
+      main > div {
+        padding: 10px 0 0 10px;
+      }
+
+      main > div:first-child {
+        background-color: yellow;
+        grid-area: 1/1/2 / span 4;
+        font-size: 48px;
+      }
+
+      main > div:nth-child(2) {
+        background-color: red;
+      }
+
+      main > div:nth-child(3) {
+        background-color: green;
+      }
+
+      main > div:nth-child(4) {
+        background-color: blue;
+      }
+
+      main > div:last-child {
+        background-color: gray;
+      }
+
+      @media only screen and (max-width: 768px) {
+        main {
+          grid-template-rows: 80px 28vw 28vw;
+          grid-template-columns: 28vw 28vw;
+        }
+
+        main > div:first-child {
+          grid-area: 1/1/2 / span 2;
+        }
+      }
+
+      @media only screen and (max-width: 600px) {
+        main {
+          grid-template-rows: 80px 28vw 28vw 28vw 28vw;
+          grid-template-columns: 80vw;
+        }
+
+        main > div:first-child {
+          grid-area: 1/1/2 / span 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>Navigation</div>
+      <div>BOX 1</div>
+      <div>BOX 2</div>
+      <div>BOX 3</div>
+      <div>BOX 4</div>
+    </main>
+  </body>
+</html>
