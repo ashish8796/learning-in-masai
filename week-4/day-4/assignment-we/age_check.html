@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <input type="text" />
+    <button id="check-age" onclick="checkAge()">Check Age</button>
+    <p></p>
+    <script>
+      function checkAge() {
+        var pTag = document.querySelector("p");
+        var age = document.querySelector("input");
+        if (Number(age.value) === 18) {
+          pTag.textContent = "You are just old enough to drive in India!";
+        } else {
+          pTag.textContent =
+            Number(age.value) > 18
+              ? "You can drive in India!"
+              : "You can't drive in India!";
+        }
+      }
+    </script>
+  </body>
+</html>

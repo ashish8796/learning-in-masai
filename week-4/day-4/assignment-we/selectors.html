@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practise Selectors</title>
+  </head>
+  <body>
+    <h1>First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <h5>First H5</h5>
+    <h5>Second H5</h5>
+    <h5>Third H5</h5>
+
+    <div class="green">First DIV</div>
+    <div class="red">Second DIV</div>
+    <div class="blue">Third DIV</div>
+    <p class="green">First P</p>
+    <p class="red">Second P</p>
+    <p class="blue">Third P</p>
+    <hr />
+
+    <button onclick="changeH1()">Change H1</button>
+    <button onclick="changeH('h3')">Change H3</button>
+    <button onclick="changeH('h5')">Change H5</button>
+    <button onclick="changeClass('green')">Change Green</button>
+    <button onclick="changeClass('red')">Change Red</button>
+    <button onclick="changeClass('blue')">Change Blue</button>
+
+    <script>
+      function changeH1() {
+        var firstH1 = document.getElementsByTagName("h1");
+        firstH1[0].style.color = "red";
+      }
+
+      function changeH(tag) {
+        var hs = document.querySelectorAll(tag);
+        for (var i = 0; i < hs.length; i++) {
+          if (tag === "h3") {
+            hs[i].style.color = "green";
+          } else {
+            hs[i].style.color = "blue";
+          }
+        }
+      }
+
+      function changeClass(className) {
+        var classArr = document.getElementsByClassName(className);
+        for (var i = 0; i < classArr.length; i++) {
+          if (className === "green") {
+            classArr[i].style.color = "green";
+          } else {
+            classArr[i].style.color = className === "blue" ? "blue" : "red";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

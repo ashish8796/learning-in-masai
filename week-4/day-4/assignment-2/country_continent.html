@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Continent</title>
+  </head>
+  <body>
+    <select id="continent_select" onclick="showContinent()">
+      <option value="India">India</option>
+      <option value="United States of America">United States of America</option>
+      <option value="China">China</option>
+      <option value="Nepal">Nepal</option>
+      <option value="Australia">Australia</option>
+      <option value="France">France</option>
+      <option value="Germany">Germany</option>
+      <option value="South Africa">South Africa</option>
+      <option value="Nigeria">Nigeria</option>
+      <option value="Mexico">Mexico</option>
+      <option value="Argentina">Argentina</option>
+      <option value="Brazil">Brazil</option>
+      <option value="Canada">Canada</option>
+      <option value="Singapore">Canada</option>
+      <option value="Sweden">Sweden</option>
+    </select>
+
+    <script>
+      var continentObj = {
+        Asia: ["India", "Nepal", "China", "Singapore"],
+        Europe: ["Germany", "France", "Sweden"],
+        "North America": ["Canada", "United States of America", "Mexico"],
+        "South America": ["Brazil", "Argentina"],
+        Australasia: ["Australia"],
+        Africa: ["South Africa", "Nigeria"],
+      };
+
+      function findContinet(country) {
+        for (var key in continentObj) {
+          for (var i = 0; i < continentObj[key].length; i++) {
+            if (continentObj[key][i] === country) {
+              return key;
+            }
+          }
+        }
+      }
+
+      function showContinent() {
+        var selectElem = document.querySelector("select");
+        console.log({ value: selectElem.value });
+        alert("The continent is " + findContinet(selectElem.value) + ".");
+      }
+    </script>
+  </body>
+</html>

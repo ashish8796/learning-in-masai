@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leader Board</title>
+    <style type="text/css">
+      body {
+        text-align: center;
+      }
+
+      main {
+        width: 40vw;
+        margin: auto;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .display {
+        font-size: 25px;
+        justify-content: space-between;
+      }
+
+      #min > p:first-child,
+      #max > p:first-child {
+        width: 9vw;
+        border: 1px solid;
+        padding: 2vw 0;
+        margin-right: 0;
+        margin: 10px 0;
+        font-weight: bold;
+      }
+
+      #min > p:first-child {
+        background-color: rgb(241, 13, 59);
+      }
+
+      #max > p:first-child {
+        background-color: rgb(2, 165, 2);
+      }
+
+      .display > div > p:last-child {
+        margin: 0;
+      }
+
+      h3 {
+        font-size: 35px;
+        margin: 20px 0 0 0;
+        font-weight: normal;
+      }
+
+      h3 + p {
+        margin: 0 auto 30px;
+        border: 1px solid black;
+        width: 40%;
+        height: 10vh;
+        font-size: 30px;
+        padding-top: 4.5vh;
+        font-weight: bold;
+        background-color: lightgray;
+      }
+
+      .keypad-cont > div > div > button {
+        padding: 18px 25px;
+        font-size: 30px;
+        border: 1px solid black;
+      }
+
+      .keypad-cont > div > div > button:hover,
+      #enter:hover {
+        cursor: pointer;
+      }
+
+      .top > button,
+      .bottom > button {
+        background-color: rgb(100, 128, 0);
+        margin-bottom: 30px;
+      }
+
+      .top > button:nth-child(even),
+      .bottom > button:nth-child(even) {
+        background-color: rgb(255, 102, 0);
+      }
+
+      .middle > button {
+        background-color: rgb(255, 102, 0);
+        margin-bottom: 30px;
+      }
+
+      .middle > button:nth-child(2),
+      .top > button:nth-child(2),
+      .bottom > button:nth-child(2) {
+        margin: auto 30px;
+      }
+
+      .bottom + div > button {
+        background-color: rgb(183, 41, 212);
+        color: white;
+      }
+
+      #enter {
+        width: 200px;
+        background-color: black;
+        color: white;
+        border: none;
+        outline: line;
+        font-size: 23px;
+        margin: 10px 0;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="display flex">
+        <div id="min">
+          <p>43</p>
+          <p>MIN</p>
+        </div>
+        <div id="max">
+          <p>2019</p>
+          <p>MAX</p>
+        </div>
+      </div>
+
+      <div class="keypad-cont">
+        <h3>SCORE</h3>
+        <p>#</p>
+        <div class="keyboard">
+          <div class="top">
+            <button onclick="changeNum(1)">1</button>
+            <button onclick="changeNum(2)">2</button>
+            <button onclick="changeNum(3)">3</button>
+          </div>
+
+          <div class="middle">
+            <button onclick="changeNum(4)">4</button>
+            <button onclick="changeNum(5)">5</button>
+            <button onclick="changeNum(6)">6</button>
+          </div>
+
+          <div class="bottom">
+            <button onclick="changeNum(7)">7</button>
+            <button onclick="changeNum(8)">8</button>
+            <button onclick="changeNum(9)">9</button>
+          </div>
+
+          <div>
+            <button onclick="changeNum(0)">0</button>
+          </div>
+
+          <button id="enter" onclick="changeLeaderboard()">ENTER</button>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      var minTag = document.querySelector("#min>p:first-child");
+      var maxTag = document.querySelector("#max>p:first-child");
+      var scoreTag = document.querySelector(".keypad-cont>p");
+
+      var num = "";
+      function changeNum(digit) {
+        num += digit;
+        scoreTag.textContent = num;
+      }
+
+      function changeLeaderboard() {
+        var score = Number(scoreTag.textContent);
+        var min = Number(minTag.textContent);
+        var max = Number(maxTag.textContent);
+
+        minTag.textContent = score < min ? score : min;
+        maxTag.textContent = score > max ? score : max;
+        num = "";
+        scoreTag.textContent = "";
+      }
+    </script>
+  </body>
+</html>

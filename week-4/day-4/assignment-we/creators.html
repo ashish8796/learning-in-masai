@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practise Creators</title>
+  </head>
+  <body>
+    <div id="headings"></div>
+    <div id="cont"></div>
+    <ul id="vikings">
+      <li>Priyanshu</li>
+    </ul>
+
+    <button onclick="createHElem('h1', 1, 'MASAI', 'headings')">
+      Create H1
+    </button>
+    <button
+      onclick="createHElem('h3', 2, 'A Transformation in education! and Learn to earn, pay when you get.', 'headings')"
+    >
+      Create 2 H3
+    </button>
+    <button onclick="createHElem('div', 10, 'Content', 'cont')">
+      Create DIVS
+    </button>
+    <button onclick="createHElem('li', 0, '', 'vikings')">Add Students</button>
+    <button onclick="createHElem('p', 1, '@ masai 2019', 'body')">
+      Add Copyright
+    </button>
+
+    <script>
+      var students = [
+        "Ajay",
+        "Akshay",
+        "Anusha",
+        "Chandrashekhara",
+        "Haren",
+        "Hasaan",
+        "Mahesh",
+        "Mousumi",
+        "Pavan",
+        "Rahul",
+        "Sumanta",
+        "Venkatesh",
+        "Vetrival",
+        "Vijayendra",
+      ];
+
+      function createHElem(elem, num, text, parent) {
+        var parentDiv = document.getElementById(parent);
+
+        for (var i = 1; i <= (num || students.length); i++) {
+          var element = document.createElement(elem);
+
+          if (elem[0] === "h") {
+            element.textContent = text;
+          } else if (elem === "div") {
+            element.textContent = text + " " + i;
+          } else if (elem === "li") {
+            element.textContent = students[i - 1];
+          } else {
+            element.textContent = text;
+            var node = document.querySelector("button");
+
+            document.querySelector("body").insertBefore(element, node);
+
+            return;
+          }
+          parentDiv.append(element);
+        }
+      }
+    </script>
+  </body>
+</html>
