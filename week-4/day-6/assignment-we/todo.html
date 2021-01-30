@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="add-todo" />
+      <button type="submit" onsubmit="addTodo(event)">Add Todo</button>
+    </form>
+
+    <table id="todo-cont"></table>
+    <script>
+      var addTodoForm = document.querySelector("form");
+      var todoCont = document.getElementById("todo-cont");
+      var todoArr = [];
+
+      function toggleTodoStatus(event) {
+        var text = event.target.textContent;
+        console.log(text);
+        event.target.textContent =
+          text === "Incomplete" ? "Completed" : "Incomplete";
+
+        event.target.style.backgroundColor =
+          text === "Completed" ? "#efefef" : "green";
+      }
+
+      function deleteTodo() {
+        var target = event.target;
+        target.parentNode.parentNode.remove();
+
+        target.removeEventListener("click", deleteTodo);
+      }
+
+      function generateTodoHtml(value) {
+        var row = document.createElement("tr");
+        var todoValueTd = document.createElement("td");
+        var statusTd = document.createElement("td");
+        var deleteTd = document.createElement("td");
+        var buttonElem = document.createElement("button");
+        var deleteBtn = document.createElement("button");
+
+        todoValueTd.textContent = value;
+        buttonElem.textContent = "Incomplete";
+        deleteBtn.textContent = "Delete";
+
+        deleteBtn.addEventListener("click", deleteTodo);
+        buttonElem.addEventListener("click", toggleTodoStatus);
+
+        statusTd.appendChild(buttonElem);
+        deleteTd.appendChild(deleteBtn);
+
+        row.appendChild(todoValueTd);
+        row.appendChild(statusTd);
+        row.appendChild(deleteTd);
+
+        todoCont.appendChild(row);
+      }
+
+      function addTodo(event) {
+        event.preventDefault();
+
+        var todoInput = document.getElementById("add-todo");
+        if (todoInput.value) {
+          generateTodoHtml(todoInput.value);
+          todoInput.value = "";
+        }
+      }
+
+      addTodoForm.addEventListener("submit", addTodo);
+    </script>
+  </body>
+</html>
