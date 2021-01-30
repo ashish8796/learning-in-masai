@@ -1,0 +1,5 @@
+Create an html page mouse_play.html
+Use an eventlistener to create the layout in the images below
+There is a div element called container with a submit button
+when the mouse moves inside the container, the background color of submitting has to change to another color
+when the mouse moves outside the container, the background color of the submit has to go back to the original color

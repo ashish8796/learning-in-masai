@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      main {
+        width: 80vw;
+        margin: auto;
+        padding: 30px;
+      }
+
+      .layout-3 {
+        padding: 30px 0;
+      }
+
+      .linus {
+        width: 30%;
+        margin: auto;
+        text-align: center;
+        background-color: wheat;
+        padding: 20px 0;
+      }
+
+      .linus img {
+        width: 150px;
+        margin: 0 0 20px 0;
+      }
+
+      .linus p {
+        font-size: 20px;
+        margin-bottom: 0;
+      }
+
+      h3 {
+        font-size: 28px;
+        margin: 0;
+        color: blue;
+      }
+
+      .khan {
+        width: 80%;
+        margin-left: 21%;
+        padding: 40px 0;
+      }
+
+      .khan img {
+        width: 130px;
+        float: left;
+        margin-right: 30px;
+      }
+
+      .khan h3 {
+        color: red;
+      }
+
+      .layout-3 > div:last-child {
+        margin-top: 80px;
+        width: 100%;
+        padding: 20px 40px;
+        height: 100px;
+        background-color: rgb(194, 86, 15);
+      }
+
+      .layout-3 h4 {
+        color: white;
+        font-size: 30px;
+        margin: 0;
+        font-weight: normal;
+      }
+
+      .layout-3 > div:last-child > div:first-child {
+        float: left;
+        border-right: 8px solid black;
+        width: 50%;
+      }
+
+      .layout-3 > div:last-child > div:last-child {
+        float: right;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Create Page</button>
+
+    <script>
+      var main = document.createElement("main");
+      var button = document.querySelector("button");
+
+      function createLinusElem() {
+        var linusDiv = document.createElement("div");
+        linusDiv.setAttribute("class", "linus");
+        var linusImg = document.createElement("img");
+        linusImg.setAttribute(
+          "src",
+          "https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/linus.jpg"
+        );
+
+        var linusName = document.createElement("h3");
+        linusName.textContent = "Linus Torvalds";
+
+        var info = document.createElement("p");
+        info.textContent = "The creator of Linux & Git";
+
+        linusDiv.appendChild(linusImg);
+        linusDiv.appendChild(linusName);
+        linusDiv.appendChild(info);
+
+        return linusDiv;
+      }
+
+      function createKhanElem() {
+        var khanDiv = document.createElement("div");
+        khanDiv.setAttribute("class", "khan");
+        var khanImg = document.createElement("img");
+        khanImg.setAttribute(
+          "src",
+          "https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/khan.jpg"
+        );
+
+        var khanName = document.createElement("h3");
+        khanName.textContent = "Sal Khan";
+
+        var info = document.createElement("p");
+        info.textContent =
+          "Salman Khan is the founder of the Khan Academy which has a mission of providing a free world-class education for anyone anywhere";
+
+        khanDiv.appendChild(khanImg);
+        khanDiv.appendChild(khanName);
+        khanDiv.appendChild(info);
+
+        return khanDiv;
+      }
+
+      function createLastPart() {
+        var lastWrapper = document.createElement("div");
+        lastWrapper.setAttribute("class", "clear");
+
+        var thompsonDiv = document.createElement("div");
+        var thompsonName = document.createElement("h4");
+        thompsonName.textContent = "Ken Thompson";
+
+        var thompInfo = document.createElement("p");
+        thompInfo.textContent =
+          "Designed and implemented the original Unix Operating system";
+
+        thompsonDiv.appendChild(thompsonName);
+        thompsonDiv.appendChild(thompInfo);
+
+        var dennisDiv = document.createElement("div");
+        var dennisName = document.createElement("h4");
+        dennisName.textContent = "Dennis Ritchie";
+
+        var dinnisInfo = document.createElement("p");
+        dinnisInfo.textContent = "The creator of C Programming Language";
+
+        dennisDiv.appendChild(dennisName);
+        dennisDiv.appendChild(dinnisInfo);
+
+        lastWrapper.appendChild(thompsonDiv);
+        lastWrapper.appendChild(dennisDiv);
+
+        return lastWrapper;
+      }
+
+      function createPage() {
+        var target = event.target;
+        var layoutDiv = document.createElement("div");
+
+        layoutDiv.setAttribute("class", "layout-3");
+
+        layoutDiv.appendChild(createLinusElem());
+        layoutDiv.appendChild(createKhanElem());
+        layoutDiv.appendChild(createLastPart());
+
+        main.appendChild(layoutDiv);
+
+        document.querySelector("body").insertBefore(main, target);
+      }
+
+      button.addEventListener("click", createPage);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      var bodyTag = document.querySelector("body");
+
+      function changeColor(event) {
+        bodyTag.style.backgroundColor = `rgb(${Math.floor(
+          Math.random() * 255
+        )},${Math.floor(Math.random() * 255)},${Math.floor(
+          Math.random() * 255
+        )})`;
+      }
+
+      window.addEventListener("resize", changeColor);
+    </script>
+  </body>
+</html>

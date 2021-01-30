@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      .container {
+        width: 70vw;
+        height: 60vh;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        border-radius: 8px;
+        margin: 15vh auto;
+        background-color: rgb(76, 154, 216);
+      }
+
+      #submit {
+        width: 150px;
+        height: 70px;
+        margin: 80px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button id="submit">Submit</button>
+    </div>
+
+    <script>
+      var container = document.querySelector("div");
+      var submit = document.getElementById("submit");
+
+      function enterContainer(event) {
+        submit.style.background = "rgb(176, 71, 57)";
+      }
+
+      function leaveContainer() {
+        submit.style.background = "rgb(90, 166, 94)";
+      }
+
+      container.addEventListener("mouseenter", enterContainer);
+      container.addEventListener("mouseleave", leaveContainer);
+    </script>
+  </body>
+</html>
