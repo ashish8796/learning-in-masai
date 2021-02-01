@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      .flex {
+        display: flex;
+      }
+
+      .grid {
+        display: grid;
+      }
+
+      main {
+        width: 70vw;
+        margin: auto;
+      }
+
+      .layer-1 {
+        justify-content: space-between;
+        background-color: lightgray;
+        padding: 20px;
+      }
+
+      .layer-1 > div {
+        border-radius: 8px;
+        flex-basis: 260px;
+        color: white;
+        background-color: blue;
+        padding: 8px 20px;
+      }
+
+      .layer-1 > div > img {
+        border-radius: 50%;
+        margin-right: 20px;
+        margin-top: 5px;
+        width: 60px;
+        height: 60px;
+      }
+
+      .layer-1 > div > div > p:first-child {
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .p-first-small {
+        font-size: 14px;
+        margin-top: -10px;
+      }
+
+      .layer-1 > div:first-child {
+        background-color: yellow;
+      }
+
+      .layer-1 > div:last-child {
+        background-color: teal;
+      }
+
+      .program {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        text-align: center;
+        width: fit-content;
+        margin: 60px auto 0;
+      }
+      h1 {
+        margin: 0 0 20px;
+        font-size: 40px;
+        grid-area: 1/1/2/5;
+        color: rgb(12, 12, 102);
+      }
+
+      .program > p {
+        width: fit-content;
+        margin: 0 auto;
+        height: fit-content;
+        padding: 5px 10px;
+        font-size: 14px;
+        color: rgb(12, 12, 102);
+      }
+
+      .program > h1 + p {
+        background-color: teal;
+        color: white;
+        border-radius: 3px;
+      }
+
+      .layer-3 {
+        color: rgb(12, 12, 102);
+      }
+
+      .layer-3 img {
+        border-radius: 4px;
+      }
+
+      .layer-3 > div > div {
+        padding-left: 20px;
+      }
+
+      h4,
+      h3 + p {
+        font-size: 14px;
+      }
+
+      h3 {
+        color: rgb(4, 4, 70);
+        margin: 0;
+      }
+
+      h3 + p {
+        color: rgb(77, 77, 145);
+      }
+
+      button {
+        border: 1px solid teal;
+        padding: 5px 20px;
+        border-radius: 3px;
+        color: teal;
+      }
+
+      @media screen and (max-width: 720px) {
+        .layer-1 {
+          flex-direction: column;
+        }
+
+        .layer-1 > div {
+          margin: 10px auto;
+          flex-basis: 100px;
+          width: 60%;
+        }
+
+        .program {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        h1 {
+          grid-area: 1/1/2/3;
+          color: rgb(12, 12, 102);
+        }
+
+        h1 + p + p + p {
+          grid-area: 3/1/4/2;
+        }
+
+        .layer-3 {
+          flex-wrap: wrap;
+        }
+
+        .layer-3 > div {
+          width: 43vw;
+          margin: 20px auto;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .program {
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        .program p {
+          margin: 0 auto;
+        }
+
+        h1 + p {
+          grid-area: 2/1/3/2;
+        }
+
+        h1 + p + p {
+          grid-area: 3/1/4/2;
+        }
+
+        h1 + p + p + p {
+          grid-area: 4/1/5/2;
+        }
+
+        h1 + p + p + p + p {
+          grid-area: 5/1/6/2;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="flex layer-1">
+        <div class="flex scholarship">
+          <img
+            src="https://via.placeholder.com/100
+          "
+          />
+          <div>
+            <p>Scholarship</p>
+            <p class="p-first-small">Available</p>
+          </div>
+        </div>
+
+        <div class="flex">
+          <img
+            src="https://via.placeholder.com/100
+          "
+          />
+          <div>
+            <p>Scholarship</p>
+            <p class="p-first-small">Available</p>
+          </div>
+        </div>
+
+        <div class="flex">
+          <img src="https://via.placeholder.com/100" />
+          <div>
+            <p>Scholarship</p>
+            <p class="p-first-small">Available</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="program grid">
+        <h1>Popular Program</h1>
+
+        <p class="p1">Graduate</p>
+        <p class="p2">Postgraduate</p>
+        <p class="p3">PHD Scholarships</p>
+        <p class="p4">Training</p>
+      </div>
+
+      <div class="flex layer-3">
+        <div>
+          <img src="https://via.placeholder.com/300x150" />
+          <div>
+            <h4>Agriculture</h4>
+            <h3>Chemical engineering</h3>
+            <p>
+              In publishing and graphic design, Lorem ipsum is a placeholder
+              text commonly used to demonstrate the visual form of a document or
+            </p>
+            <button>Apply Now</button>
+          </div>
+        </div>
+
+        <div>
+          <img src="https://via.placeholder.com/300x150" />
+          <div>
+            <h4>Agriculture</h4>
+            <h3>Chemical engineering</h3>
+            <p>
+              In publishing and graphic design, Lorem ipsum is a placeholder
+              text commonly used to demonstrate the visual form of a document or
+            </p>
+            <button>Apply Now</button>
+          </div>
+        </div>
+
+        <div>
+          <img src="https://via.placeholder.com/300x150" />
+          <div>
+            <h4>Agriculture</h4>
+            <h3>Chemical engineering</h3>
+            <p>
+              In publishing and graphic design, Lorem ipsum is a placeholder
+              text commonly used to demonstrate the visual form of a document or
+            </p>
+            <button>Apply Now</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

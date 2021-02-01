@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style type="text/css">
+      table {
+        border: 1px solid black;
+        text-align: center;
+        margin: 100px;
+      }
+
+      td {
+        border: 1px solid black;
+        padding: 10px;
+      }
+
+      form {
+        width: 70vw;
+        margin: auto;
+      }
+
+      label {
+        margin-right: 50px;
+      }
+
+      form div {
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Enter Name" />
+      </div>
+      <div>
+        <label>Age</label>
+        <input type="text" id="age" placeholder="Enter Age" />
+      </div>
+      <div>
+        <label>Science Marks</label>
+        <input type="text" id="science" placeholder="Enter Science Marks" />
+      </div>
+      <div>
+        <label>English Marks</label>
+        <input type="text" id="english" placeholder="Enter English Marks" />
+      </div>
+
+      <div>
+        <label>Mathematics Marks</label>
+        <input type="text" id="maths" placeholder="Enter Mathematics Marks" />
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <table id="table">
+      <tr>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Science Marks</td>
+        <td>English Marks</td>
+        <td>Mathematics Marks</td>
+        <td>Total Marks</td>
+      </tr>
+    </table>
+    <script>
+      var data = {};
+
+      var nameInput = document.getElementById("name");
+      var age = document.getElementById("age");
+      var science = document.getElementById("science");
+      var english = document.getElementById("english");
+      var maths = document.getElementById("maths");
+
+      var form = document.querySelector("form");
+      var table = document.getElementById("table");
+
+      function submitData() {
+        event.preventDefault();
+        data.name = nameInput.value;
+        data.age = age.value;
+        data.science = science.value;
+
+        data.english = english.value;
+
+        data.maths = maths.value;
+        data.total =
+          Number(science.value) + Number(english.value) + Number(maths.value);
+
+        console.log(data);
+
+        createTable();
+      }
+
+      function createTable() {
+        var trElem = document.createElement("tr");
+        var nameTd = document.createElement("td");
+        nameTd.textContent = data.name;
+
+        var nameTd = document.createElement("td");
+        nameTd.textContent = data.name;
+
+        var ageTd = document.createElement("td");
+        ageTd.textContent = data.age;
+
+        var scienceTd = document.createElement("td");
+        scienceTd.textContent = data.science;
+
+        var englishTd = document.createElement("td");
+        englishTd.textContent = data.english;
+
+        var mathsTd = document.createElement("td");
+        mathsTd.textContent = data.maths;
+
+        var totalTd = document.createElement("td");
+        totalTd.textContent = data.total;
+
+        trElem.appendChild(nameTd);
+        trElem.appendChild(ageTd);
+        trElem.appendChild(scienceTd);
+        trElem.appendChild(englishTd);
+        trElem.appendChild(mathsTd);
+        trElem.appendChild(totalTd);
+
+        table.appendChild(trElem);
+      }
+
+      form.addEventListener("submit", submitData);
+    </script>
+  </body>
+</html>
