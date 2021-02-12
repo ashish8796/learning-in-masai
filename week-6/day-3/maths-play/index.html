@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style type="text/css">
+      main {
+        width: fit-content;
+        margin: auto;
+      }
+
+      .show-result {
+        width: 300px;
+        height: 100px;
+        border: 1px solid gray;
+        margin-top: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <input id="num-input" />
+
+      <select id="maths-methods">
+        <option value="#" selected>Select Method</option>
+        <option value="floor">Floor Value</option>
+        <option value="ceil">Ceil Value</option>
+        <option value="round">Round Value</option>
+      </select>
+
+      <button type="submit">Submit</button>
+
+      <div class="show-result"></div>
+    </main>
+    <script>
+      var numInput = document.querySelector("input");
+      var methodOption = document.querySelector("select");
+      var submit = document.querySelector("button");
+      var resultDiv = document.querySelector(".show-result");
+
+      var mathMethods = {
+        floor(num) {
+          return Math.floor(num);
+        },
+
+        ceil(num) {
+          return Math.ceil(num);
+        },
+
+        round(num) {
+          return Math.round(num);
+        },
+      };
+
+      submit.addEventListener("click", function (event) {
+        var num = numInput.value;
+
+        if (isNaN(Number(num))) {
+          alert("Please enter a valid number.");
+        } else {
+          var selectedMethod = methodOption.value;
+
+          resultDiv.innerText = mathMethods[selectedMethod](+num);
+        }
+      });
+    </script>
+  </body>
+</html>
