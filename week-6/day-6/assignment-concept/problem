@@ -1,0 +1,9 @@
+This will be a HTML, CSS, JS project.
+
+Create a form on left hand side of webpage to accept the student data . name and city must accept only string. age and number must accept only number ( name, age, city, number )
+
+individual student data must be stored in object. think about how can you make use of constructor functions to easily create each individual student object.
+
+display all the student data on Right hand side of webpage. it should display as list. you can use tables if you want.
+
+create a simple navbar on top showing masai school logo on left to finish the assignment.

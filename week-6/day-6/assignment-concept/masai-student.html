@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masai Student</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <nav class="logo float-left">
+      <img
+        src="https://d27028dliefpk3.cloudfront.net/static/brand/MasaiLogo.svg"
+        alt="Masai "
+      />
+    </nav>
+    <main>
+      <aside class="left-side display-flex float-left">
+        <form class="display-flex">
+          <div>
+            <label>Name</label>
+            <input type="text" placeholder="Please enter your name" id="name" />
+          </div>
+
+          <div>
+            <label>Age</label>
+            <input type="number" placeholder="Please enter your age" id="age" />
+          </div>
+
+          <div>
+            <label>City</label>
+            <input type="text" placeholder="Please enter your city" id="city" />
+          </div>
+
+          <div>
+            <label>Mobile Number</label>
+            <input
+              type="number"
+              placeholder="Please enter your mobile number"
+              id="number"
+            />
+          </div>
+
+          <button>Submit</button>
+        </form>
+      </aside>
+      <aside class="right-side float-right">
+        <h2>Students</h2>
+        <div class="student-cont">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Number</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </aside>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+main {
+  width: 80vw;
+  margin: auto;
+}
+
+.left-side {
+  height: 88vh;
+  margin-top: 20px;
+}
+
+nav {
+  background: linear-gradient(
+    to right,
+    #2c171a,
+    #2c171a,
+    rgba(71, 24, 31),
+    brown,
+    red
+  );
+  width: 100vw;
+  padding: 10px 5em;
+  box-sizing: border-box;
+}
+
+main > aside:last-child {
+  width: 55.5%;
+  margin-top: 20px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+}
+
+form {
+  height: 80%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 25px;
+  position: relative;
+}
+
+form > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  margin-left: 30px;
+  font-size: 20px;
+  padding: 3px 10px;
+}
+
+input::placeholder {
+  font-size: 16px;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+table {
+  width: 100%;
+  padding-left: 30px;
+  text-align: center;
+}
+
+th {
+  font-size: 23px;
+}
+
+td {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+button {
+  width: 200px;
+  font-size: 28px;
+  position: absolute;
+  bottom: -20px;
+  right: 3.2em;
+}
+
+button:hover {
+  cursor: pointer;
+}
