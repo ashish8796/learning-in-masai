@@ -1,0 +1,4 @@
+Write a calPer() constructor function that can calculate percentage of students.
+create 10 students using a different constructor function. Students should have marksobtained, marksoutof key-value pairs.
+Use call and bind on the calPer() constructor function to change the value of 'this' and find the percentage of each student.
+Be creative. See if you could take help of any loop to minimize the amount of code you have to write.
