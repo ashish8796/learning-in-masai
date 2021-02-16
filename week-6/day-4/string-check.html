@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      main {
+        width: fit-content;
+        margin: auto;
+      }
+
+      .show-result {
+        width: 300px;
+        height: 100px;
+        border: 1px solid gray;
+        margin-top: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="first-string" />
+    <input type="text" id="sub-string" />
+
+    <button>Submit</button>
+
+    <div class="show-result"></div>
+    <script>
+      var stringInput = document.getElementById("first-string");
+      var subStringInput = document.getElementById("sub-string");
+      var resDiv = document.querySelector(".show-result");
+
+      var submitBtn = document.querySelector("button");
+
+      submitBtn.addEventListener("click", function (event) {
+        var originalStr = stringInput.value;
+        var subStr = subStringInput.value;
+
+        resDiv.innerText = originalStr.includes(subStr) ? "true" : "false";
+      });
+    </script>
+  </body>
+</html>

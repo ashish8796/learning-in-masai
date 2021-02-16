@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+      }
+
+      .btn-num {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+      }
+
+      .img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 93.5vh;
+      }
+
+      img {
+        margin: 0 30px;
+        width: 40%;
+      }
+
+      span {
+        display: inline-block;
+        border: 1px solid black;
+        width: 50px;
+        height: 18px;
+        margin: 0 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btn-num"><button>Generate Number</button> <span></span></div>
+    <div class="img-container"></div>
+    <script src="./index.js">
+      var imgContainer = document.querySelector(".img-container");
+
+      var button = document.querySelector("button");
+      var spanElem = document.querySelector("span");
+
+      function generateRandomNum() {
+        var num = Math.random() * 100;
+        return num < 2 ? generateRandomNum() : Math.floor(num);
+      }
+
+      button.addEventListener("click", function (event) {
+        var num = generateRandomNum();
+
+        if (num % 3 === 0 && num % 5 === 0) {
+          imgContainer.innerHTML = "";
+          imgContainer.style.backgroundColor = "white";
+
+          var catImgElem = document.createElement("img");
+          catImgElem.setAttribute(
+            "src",
+            "https://images.unsplash.com/photo-1550414485-9f22b971dbf0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+          );
+
+          var dogImgElem = document.createElement("img");
+          dogImgElem.setAttribute(
+            "src",
+            "https://images.unsplash.com/photo-1453227588063-bb302b62f50b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
+          );
+
+          imgContainer.appendChild(catImgElem);
+          imgContainer.appendChild(dogImgElem);
+        } else if (num % 3 === 0) {
+          imgContainer.innerHTML = "";
+          imgContainer.style.backgroundColor = "white";
+          var imgElem = document.createElement("img");
+          imgElem.setAttribute(
+            "src",
+            "https://images.unsplash.com/photo-1550414485-9f22b971dbf0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+          );
+
+          imgContainer.append(imgElem);
+        } else if (num % 5 === 0) {
+          imgContainer.innerHTML = "";
+          imgContainer.style.backgroundColor = "white";
+
+          var imgElem = document.createElement("img");
+          imgElem.setAttribute(
+            "src",
+            "https://images.unsplash.com/photo-1453227588063-bb302b62f50b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
+          );
+
+          imgContainer.append(imgElem);
+        } else {
+          imgContainer.innerHTML = "";
+          imgContainer.style.backgroundColor = "red";
+        }
+
+        spanElem.innerText = num;
+      });
+    </script>
+  </body>
+</html>
