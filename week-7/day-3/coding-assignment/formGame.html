@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+        background-color: #ffe8b75e;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3em;
+        align-items: center;
+      }
+
+      input,
+      button {
+        width: 300px;
+        padding: 5px 20px;
+        margin: 10px;
+        font-size: 20px;
+      }
+
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      .time {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .user-data {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: auto;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form>
+        <div class="time">Time remaining: <span>15</span></div>
+        <input type="text" placeholder="Enter your name" id="name" />
+        <input type="number" placeholder="Enter your age" id="age" />
+        <input type="text" placeholder="Enter your city" id="city" />
+        <input
+          type="text"
+          id="sport"
+          placeholder="Enter your  favourite sport"
+        />
+        <input type="text" id="book" placeholder="Enter your  favourite book" />
+        <input type="text" id="food" placeholder="Enter your  favourite food" />
+        <input
+          type="text"
+          id="movie"
+          placeholder="Enter your  favourite movie"
+        />
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <article class="user-data"></article>
+    </main>
+
+    <script>
+      var formElem = document.querySelector("form");
+      var nameElem = document.getElementById("name");
+      var ageElem = document.getElementById("age");
+      var cityElem = document.getElementById("city");
+      var sportElem = document.getElementById("sport");
+      var bookElem = document.getElementById("book");
+      var foodElem = document.getElementById("food");
+      var movieElem = document.getElementById("movie");
+      var timeElem = document.querySelector("span");
+      var userDataDiv = document.querySelector(".user-data");
+
+      var timer;
+      var time = 15;
+
+      function changeTime(time) {
+        timeElem.innerText = time;
+      }
+
+      function startTimer(event) {
+        timer = setInterval(function () {
+          time--;
+          changeTime(time);
+
+          if (time === -1) {
+            alert("You Lost! \n To play again please refresh the window");
+
+            clearInterval(timer);
+
+            time = 15;
+
+            changeTime(15);
+
+            nameElem.removeEventListener("focus", startTimer);
+          }
+        }, 1000);
+      }
+
+      nameElem.addEventListener("focus", startTimer);
+
+      function CreatUserData(name, age, city, book, sport, food, movie) {
+        this.name = name;
+        this.age = age;
+        this.city = city;
+        this.book = book;
+        this.sport = sport;
+        this.food = food;
+        this.movie = movie;
+      }
+
+      var user = null;
+
+      formElem.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        clearInterval(timer);
+
+        var name = nameElem.value;
+        var age = ageElem.value;
+        var city = cityElem.value;
+        var sport = sportElem.value;
+        var book = bookElem.value;
+        var food = foodElem.value;
+        var movie = movieElem.value;
+
+        user = new CreatUserData(name, age, city, book, sport, food, movie);
+
+        localStorage.setItem("user", JSON.stringify(user));
+
+        insertUserData();
+      });
+
+      function insertUserData() {
+        var nameP = document.createElement("p");
+        nameP.innerText = user.name;
+
+        var ageP = document.createElement("p");
+        ageP.innerText = user.age;
+
+        var cityP = document.createElement("p");
+        cityP.innerText = user.city;
+
+        var bookP = document.createElement("p");
+        bookP.innerText = user.book;
+
+        var foodP = document.createElement("p");
+        foodP.innerText = user.food;
+
+        var movieP = document.createElement("p");
+        movieP.innerText = user.movie;
+
+        var sportP = document.createElement("p");
+        sportP.innerText = user.sport;
+
+        userDataDiv.append(nameP);
+        userDataDiv.append(ageP);
+        userDataDiv.append(cityP);
+        userDataDiv.append(bookP);
+        userDataDiv.append(foodP);
+        userDataDiv.append(sportP);
+        userDataDiv.append(movieP);
+      }
+    </script>
+  </body>
+</html>
