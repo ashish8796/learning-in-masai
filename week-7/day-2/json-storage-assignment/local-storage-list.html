@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style type="text/css">
+      body {
+        margin: 0;
+      }
+
+      main {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+
+      div {
+        margin-top: 2em;
+        font-size: 20px;
+      }
+
+      .name-list {
+        width: fit-content;
+      }
+
+      input,
+      button {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>
+        <input type="text" placeholder="Enter your name" />
+        <button>Add</button>
+      </div>
+
+      <div class="name-list"></div>
+
+      <script>
+        var nameInput = document.querySelector("input");
+
+        var addBtn = document.querySelector("button");
+
+        var nameList = document.querySelector(".name-list");
+
+        var nameArr =
+          "nameArr" in localStorage
+            ? JSON.parse(localStorage.getItem("nameArr"))
+            : [];
+
+        function takeName() {
+          var name = nameInput.value;
+          nameArr.push(name);
+
+          localStorage.setItem("nameArr", JSON.stringify(nameArr));
+        }
+
+        function createName(arr) {
+          var nameStr = "";
+
+          nameArr.length > 0 &&
+            arr.forEach((name) => {
+              var str = `<p>${name}</p> \n`;
+              nameStr += str.trim();
+            });
+
+          nameList.innerHTML = nameStr;
+        }
+
+        createName(nameArr);
+
+        addBtn.addEventListener("click", function () {
+          takeName();
+          createName(nameArr);
+
+          nameInput.value = "";
+        });
+      </script>
+    </main>
+  </body>
+</html>

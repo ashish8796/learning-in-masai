@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+      }
+
+      main {
+        width: 50vw;
+        height: 100vh;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 50px;
+      }
+
+      button {
+        font-size: 25px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <button id="decrease">Decrease Count</button>
+
+      <h1>0</h1>
+
+      <button id="increase">Increase Count</button>
+    </main>
+    <script>
+      var incrementBtn = document.getElementById("increase");
+      var decrementBtn = document.getElementById("decrease");
+
+      var count = document.querySelector("h1");
+
+      var counter =
+        "counter" in localStorage
+          ? JSON.parse(localStorage.getItem("counter"))
+          : 0;
+
+      count.innerText = counter;
+
+      function changeCounter(counter) {
+        localStorage.setItem("counter", JSON.stringify(counter));
+
+        count.innerText = counter;
+      }
+
+      function increaseCount() {
+        counter++;
+        changeCounter(counter);
+      }
+
+      function decreaseCount() {
+        counter--;
+        changeCounter(counter);
+      }
+
+      incrementBtn.addEventListener("click", increaseCount);
+
+      decrementBtn.addEventListener("click", decreaseCount);
+    </script>
+  </body>
+</html>
