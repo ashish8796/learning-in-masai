@@ -1,0 +1,15 @@
+curl -X POST -H "Content-Type: application/json" -d "{
+ \"name\": \"Ashish\",
+ \"email\": \"xyz.ak@gmail.com\",
+ \"username\": \"ashish-new\",
+ \"password\": \"Ashish@!23\",
+ \"description\": \"I am a aspiring full stack developer\",
+ \"mobile\": \"8218055803\"
+}" https://masai-api-mocker.herokuapp.com/auth/register
+
+curl -X POST curl -X POST -H "Content-Type: application/json" -d "{
+ \"username\": \"ashish-new\",
+ \"password\": \"Ashish@!23\"
+}" https://masai-api-mocker.herokuapp.com/auth/login
+
+curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer 4f0cc9f870b7b5e72b9d9317e738fd9e" https://masai-api-mocker.herokuapp.com/user/ashish-new

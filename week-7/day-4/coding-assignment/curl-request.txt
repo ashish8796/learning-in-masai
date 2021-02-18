@@ -1,0 +1,7 @@
+curl https://www.google.com
+
+curl -i https://www.google.com   
+
+curl -L masaischool.com   
+
+curl -iL masaischool.com 
