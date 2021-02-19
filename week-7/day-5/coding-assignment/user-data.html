@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      section:last-child {
+        margin: auto;
+        text-align: center;
+        width: 100vw;
+      }
+
+      #tabular-data,
+      tr {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        width: 80%;
+        margin: 50px auto 0;
+      }
+
+      table {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <input type="number" />
+
+        <button id="submit">Submit</button>
+
+        <button class="abort">Abort</button>
+      </section>
+
+      <section id="user-data">
+        <table>
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Id</th>
+              <th>Email</th>
+              <th>Profile Pic Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="tabular-data"></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script>
+      var idInput = document.querySelector("input");
+      var submitBtn = document.querySelector("#submit");
+      var abortBtn = document.querySelector(".abort");
+      var section = document.getElementById("user-data");
+      var trElem = document.getElementById("tabular-data");
+
+      var request = new XMLHttpRequest();
+
+      function makeRequest() {
+        var userId = idInput.value;
+
+        var url = "https://reqres.in/api/users/";
+
+        request.open("GET", url + userId);
+
+        request.send();
+
+        request.onload = function () {
+          var userData = JSON.parse(request.response).data;
+
+          var dataStr = `
+            <td>${userData.first_name}</td>
+            <td>${userData.last_name}</td>
+            <td>${userData.id}</td>
+            <td>${userData.email}</td>
+            <td>${userData.avatar}</td>
+          `;
+
+          setTimeout(function () {
+            trElem.innerHTML = dataStr;
+          }, 4000);
+        };
+      }
+
+      submitBtn.addEventListener("click", makeRequest);
+      abortBtn.addEventListener("click", function () {
+        request.abort();
+      });
+    </script>
+  </body>
+</html>

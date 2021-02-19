@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      section:last-child {
+        margin: 2em auto;
+        width: 70%;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <select id="dropdown">
+          <option value="GET" selected>GET</option>
+          <option value="POST">POST</option>
+          <option value="PUT">PUT</option>
+          <option value="DELETE">DELETE</option>
+        </select>
+
+        <button>Submit</button>
+      </section>
+
+      <section id="user-data"></section>
+    </main>
+
+    <script>
+      var selectRequest = document.querySelector("select");
+      var submitBtn = document.querySelector("button");
+      var section = document.getElementById("user-data");
+
+      function makeRequest() {
+        var method = selectRequest.value;
+
+        var request = new XMLHttpRequest();
+        var url = "https://reqres.in/api/users";
+
+        var query = null;
+        var body = null;
+
+        switch (method) {
+          case "GET":
+            query = "?page=2";
+            break;
+          case "POST":
+            query = "";
+            body = JSON.stringify({
+              name: "morpheus",
+              job: "leader",
+            });
+            break;
+          case "PUT":
+            query = "/2";
+            body = JSON.stringify({
+              name: "morpheus",
+              job: "zion resident",
+            });
+            break;
+          case "DELETE":
+            query = "/2";
+        }
+
+        request.open(method, url + query);
+
+        request.send(query ? body : "");
+
+        request.onload = function () {
+          section.innerText = request.response
+            ? request.response
+            : request.status;
+        };
+      }
+
+      submitBtn.addEventListener("click", makeRequest);
+    </script>
+  </body>
+</html>
