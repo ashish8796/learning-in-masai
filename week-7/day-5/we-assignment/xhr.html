@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" />
+    <button>Get Data</button>
+
+    <div class="user-data"></div>
+    <script>
+      var button = document.querySelector("button");
+      var userDataElem = document.querySelector(".user-data");
+      var inputElem = document.querySelector("input");
+
+      function getData() {
+        var userId = inputElem.value;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://reqres.in/api/users/");
+
+        // xhr.onerror = function () {
+        //   alert("Error");
+        //   console.log(xhr.response);
+        // };
+
+        var data = {
+          name: "morpheus",
+          job: "leader",
+        };
+
+        var body = JSON.stringify(data);
+        xhr.send(body);
+
+        xhr.onload = function () {
+          // console.log(xhr);
+          // var obj = JSON.parse(xhr.response).data;
+          console.log(xhr.response);
+
+          var firstName = obj.first_name;
+          var lastName = obj.last_name;
+          var email = obj.email;
+
+          var userStr = `
+              <p>
+              <span>Name: ${firstName} ${lastName}</span>
+              <span>Email: ${email}</span>
+                </p>
+            `;
+
+          userDataElem.innerHTML = userStr;
+          inputElem.value = "";
+        };
+      }
+
+      button.addEventListener("click", getData);
+    </script>
+  </body>
+</html>
