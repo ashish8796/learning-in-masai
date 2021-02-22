@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style type="text/css">
+      main {
+        width: 40vw;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 10%;
+        gap: 50px;
+        font-size: 20px;
+      }
+
+      button {
+        width: 150px;
+        padding: 5px 10px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>
+        <label for="email">Enter your email</label>
+        <input type="email" id="email" />
+      </div>
+
+      <div>
+        <label for="password">Enter your password</label>
+        <input type="password" id="password" />
+      </div>
+
+      <button type="submit" id="submit-btn">Submit</button>
+
+      <div id="token"></div>
+    </main>
+
+    <script src="register.js"></script>
+  </body>
+</html>
