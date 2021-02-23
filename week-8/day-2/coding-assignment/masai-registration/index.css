@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+}
+
+main {
+  width: 60vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  justify-content: flex-end;
+}
+
+.login-heading {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 85px;
+}
+
+#login-form {
+  margin-left: auto;
+  width: fit-content;
+}
+
+#register-form > div,
+#login-form > div {
+  display: flex;
+  margin: 15px 0;
+  flex-direction: column;
+}
+
+input {
+  width: 200px;
+  margin: 10px 0;
+}
+
+label,
+input,
+button {
+  font-size: 18px;
+}
+
+button {
+  margin-left: 70px;
+  display: block;
+}
