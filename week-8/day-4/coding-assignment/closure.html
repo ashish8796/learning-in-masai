@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <input type="number" placeholder="Enter class 7 score" id="score-7" />
+      <input type="number" placeholder="Enter class 8 score" id="score-8" />
+      <input type="number" placeholder="Enter class 9 score" id="score-9" />
+      <input type="number" placeholder="Enter class 10 score" id="score-10" />
+
+      <button>Calculate Average</button>
+    </main>
+
+    <script>
+      var score7Elem = document.getElementById("score-7");
+      var score8Elem = document.getElementById("score-8");
+      var score9Elem = document.getElementById("score-9");
+      var score10Elem = document.getElementById("score-10");
+
+      var avgBtn = document.querySelector("button");
+
+      avgBtn.addEventListener("click", (e) => {
+        function class7(score7) {
+          return function (score8) {
+            return function (score9) {
+              return function (score10) {
+                return (
+                  (Number(score7) +
+                    Number(score8) +
+                    Number(score9) +
+                    Number(score10)) /
+                  4
+                );
+              };
+            };
+          };
+        }
+
+        console.log({
+          score7: score7Elem.value,
+          score8: score8Elem.value,
+          score9: score9Elem.value,
+          score10: score10Elem.value,
+        });
+
+        var class8 = class7(score7Elem.value);
+        var class9 = class8(score8Elem.value);
+        var class10 = class9(score9Elem.value);
+
+        console.log(class10(score10Elem.value));
+      });
+    </script>
+  </body>
+</html>
