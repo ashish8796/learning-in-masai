@@ -8,6 +8,7 @@ Stack.prototype.push = function (val) {
 
 Stack.prototype.pop = function () {
   var arr = this.storage.split(" ");
+  var arr = this.storage.slice(this.storage.lastIndexOf(" "));
   return arr.pop();
   // this.storage = arr.join(" ");
 };

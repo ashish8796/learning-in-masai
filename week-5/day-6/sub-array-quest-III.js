@@ -18,7 +18,7 @@ function runProgram(input) {
     });
   });
 
-  // console.log({ inputArr, rawArr, arr, numArr, sumNumArr });
+  console.log({ inputArr, rawArr, arr, numArr, sumNumArr });
 
   var resArr = [];
 
@@ -34,7 +34,7 @@ function runProgram(input) {
     });
   });
 
-  // console.log({ arr, sumNumArr, resArr });
+  console.log({ arr, sumNumArr, resArr });
 
   console.log(resArr.length);
 }
