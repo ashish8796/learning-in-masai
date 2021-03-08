@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+.clear-fix::before,
+.clear-fix::after {
+  content: "";
+  clear: both;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.display-grid {
+  display: grid;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.hover:hover {
+  cursor: pointer;
+}
+
+body {
+}
+
+header {
+}
+
+.wrapper {
+}
+
+main {
+}
+
+footer {
+}
+
+/*small laptops */
+@media only screen and (max-width: 1024px) {
+}
+
+/* iPads */
+@media only screen and (max-width: 768px) {
+}
+
+/* Smartphones (landscape) */
+@media only screen and (max-width: 480px) {
+}
+
+/* Smartphones (portrait) */
+@media only screen and (max-width: 320px) {
+}

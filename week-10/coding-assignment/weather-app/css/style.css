@@ -1,0 +1,44 @@
+@import "./reset.css";
+@import "./css-boiler-plate.css";
+
+body {
+  background-color: skyblue;
+}
+
+tr {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 20px;
+  padding: 10px 0;
+}
+
+img {
+  width: 50px;
+}
+
+main {
+  width: 80vw;
+  margin: auto;
+  padding: 50px 0;
+}
+
+button,
+input {
+  font-size: 20px;
+  margin: 40px 20px;
+}
+
+input {
+  padding-left: 15px;
+}
+
+th {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
